@@ -34,18 +34,87 @@ h1 {
 
 h2 {
   font-family: "Space Grotesk", sans-serif;
-  font-size: 32px;
+  font-size: 26px;
   font-weight: bold;
 }
 
 h3 {
   font-family: "Space Grotesk", sans-serif;
-  font-size: 26px;
+  font-size: 18px;
   font-weight: bold;
 }
 
-h4 {
-  font-family: "Space Grotesk", sans-serif;
-  font-size: 18px;
-  font-weight: bold;
+header {
+  background-image: linear-gradient(to right, #000000 15%, #574075 50%, #000000 85%);
+}
+
+header img {
+  display: block;
+  margin: auto;
+}
+
+header nav {
+  display: flex;
+  justify-content: end;
+  gap: 20px;
+  margin: 20px;
+}
+
+.carousel {
+  display: flex;
+  gap: 20px;
+  margin: auto;
+  justify-content: center;
+}
+
+p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+}
+
+summary {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+}
+
+.carousel h1, p {
+  text-align: center;
+}
+
+.carousel img {
+  display: flex;
+  justify-content: center;
+  max-width: 100px;
+  margin: auto;
+}
+
+.card-pink {
+  background-color: #953775;
+  min-width: 240px;
+  border-radius: 5px;
+  padding: 15px;
+  padding-bottom: 20px;
+  margin: none;
+}
+
+.card-yellow {
+  background-color: #FFDC98;
+  min-width: 240px;
+  border-radius: 5px;
+  padding: 15px;
+  padding-bottom: 20px;
+  margin: none;
+}
+
+.card-orange {
+  background-color: #D59F77;
+  min-width: 240px;
+  border-radius: 5px;
+  padding: 15px;
+  padding-bottom: 20px;
+  margin: none;
+}
+
+.thumbnail img {
+  max-width: 200px;
 }
