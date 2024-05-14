@@ -12,7 +12,7 @@
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
       rel="stylesheet" />
     <link rel="stylesheet" href="/styles.css" />
-    <script rel="script" href="/script.js"></script>
+    <link rel="stylesheet" href="/styles.css" />
     <title>Blog Spawn</title>
   </head>
   <body>
@@ -47,14 +47,38 @@
         </ul>
       </nav>
     </header>
-
     <main>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum aliquam
-        est necessitatibus. Ex incidunt fugiat eveniet! Quidem recusandae
-        veritatis, omnis vel saepe quam ullam facilis inventore amet maxime
-        rerum excepturi!
-      </p>
+      <div class="post-container">
+        <div class="post-header">
+          <h1>Blog Spawn</h1>
+        </div>
+        <div class="post-form">
+          <form action="/post/create-post" method="POST" id="uploadForm" enctype="multipart/form-data">
+            <div class="form-group">
+              <label for="title">Blog Title</label>
+              <input type="text" id="title" name="title" />
+            </div>
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" />
+            </div>
+            <div class="form-group">
+              <label for="content">Write your content here....</label>
+              <textarea id="content" name="content"></textarea>
+            </div>
+            <div class="date">
+              <label for="date">Date</label>
+              <input type="date" id="date" name="date" />
+            </div>
+            <div class="add-image">
+              <label for="image">Add Image</label>
+              <input type="file" id="image" name="image" />
+            </div>
+            <div class="form-group">
+              <button type="submit">Submit</button>
+            </div>
+          </form>
+          
     </main>
     <footer>
       <div class="footer-logo">

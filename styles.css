@@ -1,25 +1,3 @@
-/*
-// <uniquifier>: Use a unique and descriptive class name
-// <weight>: Use a value from 300 to 700
-
-.space-grotesk-<uniquifier> {
-  font-family: "Space Grotesk", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-}
-
-// <uniquifier>: Use a unique and descriptive class name
-// <weight>: Use a value from 100 to 900
-
-.montserrat-<uniquifier> {
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-}
-*/
-
 body {
   font-family: "Montserrat", sans-serif;
   font-size: 20px;
@@ -119,8 +97,10 @@ footer {
 
 .carousel {
   display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
-  margin: auto;
+  margin: 20px;
   justify-content: center;
 }
 
@@ -144,6 +124,7 @@ p {
   justify-content: center;
   max-width: 100px;
   margin: auto;
+  padding: 10px 0 15px 0;
 }
 
 .card-pink {
@@ -152,7 +133,6 @@ p {
   border-radius: 5px;
   padding: 15px;
   padding-bottom: 20px;
-  margin: none;
 }
 
 .card-yellow {
@@ -161,7 +141,6 @@ p {
   border-radius: 5px;
   padding: 15px;
   padding-bottom: 20px;
-  margin: none;
 }
 
 .card-orange {
@@ -170,9 +149,62 @@ p {
   border-radius: 5px;
   padding: 15px;
   padding-bottom: 20px;
-  margin: none;
 }
 
 .thumbnail img {
   max-width: 200px;
+}
+
+/* form */
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  width: 335px;
+  width: 100%;
+
+}
+/* create-post.html */
+
+.post-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.post-container h1 {
+  text-align: center;
+}
+
+.post-container form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+
+.post-container input {
+  margin: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+}
+
+.post-container textarea {
+  margin: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+}
+
+.post-container button {
+  margin: 10px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: none;
+  background-color: #574075; 
+  color: white;
+  font-weight: bold;
 }
