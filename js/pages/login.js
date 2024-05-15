@@ -24,9 +24,22 @@ loginForm.addEventListener('submit', async (event) => {
 
     localStorage.setItem('token', token);
 
-    window.location.href = '/index.html';
+    window.location.href = '/post/create-post.html';
   } catch (error) {
     console.error('Error:', error.message);
     document.querySelector('#error-message').innerText = 'Login failed. Please try again.';
   }
 });
+
+function toggleSignInState(isSignedIn) {
+  const signedOutHeader = document.getElementById('signedOutHeader');
+  const signedInHeader = document.getElementById('signedInHeader');
+  
+  if (isSignedIn) {
+    signedOutHeader.style.display = 'none';
+    signedInHeader.style.display = 'block';
+  } else {
+    signedOutHeader.style.display = 'block';
+    signedInHeader.style.display = 'none';
+  }
+}

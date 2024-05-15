@@ -12,41 +12,70 @@
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
       rel="stylesheet" />
     <link rel="stylesheet" href="/styles.css" />
-    <script type="module" src="/pages/login.js"></script>
+    <script type="module" src="/js/pages/login.js"></script>
     <title>Blog Spawn</title>
   </head>
   <body>
     <header>
       <nav>
-        <ul>
-          <li>
-            <a href="/index.html">
-              <svg width="24px" height="24px" viewBox="0 0 24 24">
-                <path
-                  fill="#ffffff"
-                  d="M20 10a1 1 0 1 0-2 0zM6 10a1 1 0 0 0-2 0zm14.293 2.707a1 1 0 0 0 1.414-1.414zM12 3l.707-.707a1 1 0 0 0-1.414 0zm-9.707 8.293a1 1 0 1 0 1.414 1.414zM7 22h10v-2H7zm13-3v-9h-2v9zM6 19v-9H4v9zm15.707-7.707l-9-9l-1.414 1.414l9 9zm-10.414-9l-9 9l1.414 1.414l9-9zM17 22a3 3 0 0 0 3-3h-2a1 1 0 0 1-1 1zM7 20a1 1 0 0 1-1-1H4a3 3 0 0 0 3 3z" />
-              </svg>
-              <p>Home</p>
-            </a>
-          </li>
-        </ul>
-        <div class="header-logo">
-          <img src="https://i.ibb.co/rM38SfG/logo.png" alt="logo" />
+
+        <!-- Header content for signed out -->
+        <div id="signedOutHeader">
+          <ul>
+            <li>
+              <a href="/index.html">
+                <svg width="24px" height="24px" viewBox="0 0 24 24">
+                  <path fill="#ffffff" d="M20 10a1 1 0 1 0-2 0zM6 10a1 1 0 0 0-2 0zm14.293 2.707a1 1 0 0 0 1.414-1.414zM12 3l.707-.707a1 1 0 0 0-1.414 0zm-9.707 8.293a1 1 0 1 0 1.414 1.414zM7 22h10v-2H7zm13-3v-9h-2v9zM6 19v-9H4v9zm15.707-7.707l-9-9l-1.414 1.414l9 9zm-10.414-9l-9 9l1.414 1.414l9-9zM17 22a3 3 0 0 0 3-3h-2a1 1 0 0 1-1 1zM7 20a1 1 0 0 1-1-1H4a3 3 0 0 0 3 3z"/>
+                </svg>
+                <p>Home</p>
+              </a>
+            </li>
+          </ul>
+          <div class="header-logo">
+            <img src="https://i.ibb.co/rM38SfG/logo.png" alt="logo" />
+          </div>
+          <ul>
+            <li>
+              <a href="/account/login.html">
+                <svg width="24px" height="24px" viewBox="0 0 24 24">
+                  <path fill="#ffffff" d="M12 4a3.5 3.5 0 1 0 0 7a3.5 3.5 0 0 0 0-7M6.5 7.5a5.5 5.5 0 1 1 11 0a5.5 5.5 0 0 1-11 0M3 19a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v3H3zm5-3a3 3 0 0 0-3 3v1h14v-1a3 3 0 0 0-3-3z"/>
+                </svg>
+                <p>Sign In</p>
+              </a>
+            </li>
+          </ul>
         </div>
-        <ul>
-          <li>
-            <a href="#">
-              <svg width="24px" height="24px" viewBox="0 0 24 24">
-                <path
-                  fill="#ffffff"
-                  d="M12 4a3.5 3.5 0 1 0 0 7a3.5 3.5 0 0 0 0-7M6.5 7.5a5.5 5.5 0 1 1 11 0a5.5 5.5 0 0 1-11 0M3 19a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v3H3zm5-3a3 3 0 0 0-3 3v1h14v-1a3 3 0 0 0-3-3z" />
-              </svg>
-              <p>Sign In</p>
-            </a>
-          </li>
-        </ul>
+
+        <!-- Header content for signed in -->
+        <div id="signedInHeader" style="display: none;">
+          <ul>
+            <li>
+              <a href="/index.html">
+                <svg width="24px" height="24px" viewBox="0 0 24 24">
+                  <path fill="#ffffff" d="M20 10a1 1 0 1 0-2 0zM6 10a1 1 0 0 0-2 0zm14.293 2.707a1 1 0 0 0 1.414-1.414zM12 3l.707-.707a1 1 0 0 0-1.414 0zm-9.707 8.293a1 1 0 1 0 1.414 1.414zM7 22h10v-2H7zm13-3v-9h-2v9zM6 19v-9H4v9zm15.707-7.707l-9-9l-1.414 1.414l9 9zm-10.414-9l-9 9l1.414 1.414l9-9zM17 22a3 3 0 0 0 3-3h-2a1 1 0 0 1-1 1zM7 20a1 1 0 0 1-1-1H4a3 3 0 0 0 3 3z"/>
+                </svg>
+                <p>Home</p>
+              </a>
+            </li>
+          </ul>
+          <div class="header-logo">
+            <img src="https://i.ibb.co/rM38SfG/logo.png" alt="logo" />
+          </div>
+          <ul>
+            <li>
+              <a href="/post/create-post.html">
+                <svg width="24" height="24" viewBox="0 0 512 512">
+                  <path fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M384 224v184a40 40 0 0 1-40 40H104a40 40 0 0 1-40-40V168a40 40 0 0 1 40-40h167.48" />
+                  <path fill="white" d="M459.94 53.25a16.06 16.06 0 0 0-23.22-.56L424.35 65a8 8 0 0 0 0 11.31l11.34 11.32a8 8 0 0 0 11.34 0l12.06-12c6.1-6.09 6.67-16.01.85-22.38M399.34 90L218.82 270.2a9 9 0 0 0-2.31 3.93L208.16 299a3.91 3.91 0 0 0 4.86 4.86l24.85-8.35a9 9 0 0 0 3.93-2.31L422 112.66a9 9 0 0 0 0-12.66l-9.95-10a9 9 0 0 0-12.71 0" />
+                </svg>
+                <p>Blog Spawn</p>
+              </a>
+            </li>
+          </ul>
+        </div>
       </nav>
     </header>
+    
     <main>
       <div class="login-container">
         <div class="login-form">
