@@ -1,3 +1,5 @@
+doFetch('POST', 'https://v2.api.noroff.dev/auth/login', )
+
 const loginForm = document.querySelector('.login-form');
 
 loginForm.addEventListener('submit', async (event) => {
