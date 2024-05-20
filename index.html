@@ -1,81 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
-      rel="stylesheet" />
-    <link rel="stylesheet" href="/styles.css" />
-    <script type="module" src="/js/components/fetch.js"></script>
-    <title>Blog Spawn</title>
-  </head>
-  <body>
-    <header>
-      <nav>
-
-        <!-- Header content for signed out -->
-        <div id="signedOutHeader">
-          <ul>
-            <li>
-              <a href="/index.html">
-                <svg width="24px" height="24px" viewBox="0 0 24 24">
-                  <path fill="#ffffff" d="M20 10a1 1 0 1 0-2 0zM6 10a1 1 0 0 0-2 0zm14.293 2.707a1 1 0 0 0 1.414-1.414zM12 3l.707-.707a1 1 0 0 0-1.414 0zm-9.707 8.293a1 1 0 1 0 1.414 1.414zM7 22h10v-2H7zm13-3v-9h-2v9zM6 19v-9H4v9zm15.707-7.707l-9-9l-1.414 1.414l9 9zm-10.414-9l-9 9l1.414 1.414l9-9zM17 22a3 3 0 0 0 3-3h-2a1 1 0 0 1-1 1zM7 20a1 1 0 0 1-1-1H4a3 3 0 0 0 3 3z"/>
-                </svg>
-                <p>Home</p>
-              </a>
-            </li>
-          </ul>
-          <div class="header-logo">
-            <img src="https://i.ibb.co/rM38SfG/logo.png" alt="logo" />
-          </div>
-          <ul>
-            <li>
-              <a href="/account/login.html">
-                <svg width="24px" height="24px" viewBox="0 0 24 24">
-                  <path fill="#ffffff" d="M12 4a3.5 3.5 0 1 0 0 7a3.5 3.5 0 0 0 0-7M6.5 7.5a5.5 5.5 0 1 1 11 0a5.5 5.5 0 0 1-11 0M3 19a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v3H3zm5-3a3 3 0 0 0-3 3v1h14v-1a3 3 0 0 0-3-3z"/>
-                </svg>
-                <p>Sign In</p>
-              </a>
-            </li>
-          </ul>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+  <script type="module" src="/js/pages/login.js"></script>
+  <title>Blog Spawn</title>
+</head>
+<body>
+  <header>
+    <nav>
+      <!-- Header content for signed out -->
+      <div id="signedOutHeader">
+        <ul>
+          <li>
+            <a href="/index.html">
+              <svg width="24px" height="24px" viewBox="0 0 24 24">
+                <path fill="#ffffff" d="M20 10a1 1 0 1 0-2 0zM6 10a1 1 0 0 0-2 0zm14.293 2.707a1 1 0 0 0 1.414-1.414zM12 3l.707-.707a1 1 0 0 0-1.414 0zm-9.707 8.293a1 1 0 1 0 1.414 1.414zM7 22h10v-2H7zm13-3v-9h-2v9zM6 19v-9H4v9zm15.707-7.707l-9-9l-1.414 1.414l9 9zm-10.414-9l-9 9l1.414 1.414l9-9zM17 22a3 3 0 0 0 3-3h-2a1 1 0 0 1-1 1zM7 20a1 1 0 0 1-1-1H4a3 3 0 0 0 3 3z" aria-label="Home Icon"/>
+              </svg>
+              <p>Home</p>
+            </a>
+          </li>
+        </ul>
+        <div class="header-logo">
+          <img src="https://i.ibb.co/rM38SfG/logo.png" alt="logo" />
         </div>
+        <ul>
+          <li>
+            <a href="/account/login.html">
+              <svg width="24px" height="24px" viewBox="0 0 24 24">
+                <path fill="#ffffff" d="M12 4a3.5 3.5 0 1 0 0 7a3.5 3.5 0 0 0 0-7M6.5 7.5a5.5 5.5 0 1 1 11 0a5.5 5.5 0 0 1-11 0M3 19a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v3H3zm5-3a3 3 0 0 0-3 3v1h14v-1a3 3 0 0 0-3-3z" aria-label="Sign In Icon"/>
+              </svg>
+              <p>Sign In</p>
+            </a>
+          </li>
+        </ul>
+      </div>
 
-        <!-- Header content for signed in -->
-        <div id="signedInHeader" style="display: none;">
-          <ul>
-            <li>
-              <a href="/index.html">
-                <svg width="24px" height="24px" viewBox="0 0 24 24">
-                  <path fill="#ffffff" d="M20 10a1 1 0 1 0-2 0zM6 10a1 1 0 0 0-2 0zm14.293 2.707a1 1 0 0 0 1.414-1.414zM12 3l.707-.707a1 1 0 0 0-1.414 0zm-9.707 8.293a1 1 0 1 0 1.414 1.414zM7 22h10v-2H7zm13-3v-9h-2v9zM6 19v-9H4v9zm15.707-7.707l-9-9l-1.414 1.414l9 9zm-10.414-9l-9 9l1.414 1.414l9-9zM17 22a3 3 0 0 0 3-3h-2a1 1 0 0 1-1 1zM7 20a1 1 0 0 1-1-1H4a3 3 0 0 0 3 3z"/>
-                </svg>
-                <p>Home</p>
-              </a>
-            </li>
-          </ul>
-          <div class="header-logo">
-            <img src="https://i.ibb.co/rM38SfG/logo.png" alt="logo" />
-          </div>
-          <ul>
-            <li>
-              <a href="/post/create-post.html">
-                <svg width="24" height="24" viewBox="0 0 512 512">
-                  <path fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M384 224v184a40 40 0 0 1-40 40H104a40 40 0 0 1-40-40V168a40 40 0 0 1 40-40h167.48" />
-                  <path fill="white" d="M459.94 53.25a16.06 16.06 0 0 0-23.22-.56L424.35 65a8 8 0 0 0 0 11.31l11.34 11.32a8 8 0 0 0 11.34 0l12.06-12c6.1-6.09 6.67-16.01.85-22.38M399.34 90L218.82 270.2a9 9 0 0 0-2.31 3.93L208.16 299a3.91 3.91 0 0 0 4.86 4.86l24.85-8.35a9 9 0 0 0 3.93-2.31L422 112.66a9 9 0 0 0 0-12.66l-9.95-10a9 9 0 0 0-12.71 0" />
-                </svg>
-                <p>Blog Spawn</p>
-              </a>
-            </li>
-          </ul>
+      <!-- Header content for signed in -->
+      <div id="signedInHeader" style="display: none;">
+        <ul>
+          <li>
+            <a href="/index.html">
+              <svg width="24px" height="24px" viewBox="0 0 24 24">
+                <path fill="#ffffff" d="M20 10a1 1 0 1 0-2 0zM6 10a1 1 0 0 0-2 0zm14.293 2.707a1 1 0 0 0 1.414-1.414zM12 3l.707-.707a1 1 0 0 0-1.414 0zm-9.707 8.293a1 1 0 1 0 1.414 1.414zM7 22h10v-2H7zm13-3v-9h-2v9zM6 19v-9H4v9zm15.707-7.707l-9-9l-1.414 1.414l9 9zm-10.414-9l-9 9l1.414 1.414l9-9zM17 22a3 3 0 0 0 3-3h-2a1 1 0 0 1-1 1zM7 20a1 1 0 0 1-1-1H4a3 3 0 0 0 3 3z" aria-label="Home Icon"/>
+              </svg>
+              <p>Home</p>
+            </a>
+          </li>
+        </ul>
+        <div class="header-logo">
+          <img src="https://i.ibb.co/rM38SfG/logo.png" alt="logo" />
         </div>
-      </nav>
-    </header>
+        <ul>
+          <li>
+            <a href="/post/create-post.html">
+              <svg width="24" height="24" viewBox="0 0 512 512">
+                <path fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M384 224v184a40 40 0 0 1-40 40H104a40 40 0 0 1-40-40V168a40 40 0 0 1 40-40h167.48" />
+                <path fill="white" d="M459.94 53.25a16.06 16.06 0 0 0-23.22-.56L424.35 65a8 8 0 0 0 0 11.31l11.34 11.32a8 8 0 0 0 11.34 0l12.06-12c6.1-6.09 6.67-16.01.85-22.38M399.34 90L218.82 270.2a9 9 0 0 0-2.31 3.93L208.16 299a3.91 3.91 0 0 0 4.86 4.86l24.85-8.35a9 9 0 0 0 3.93-2.31L422 112.66a9 9 0 0 0 0-12.66l-9.95-10a9 9 0 0 0-12.71 0" aria-label="Blog Spawn Icon" />
+              </svg>
+              <p>Blog Spawn</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
     <main>
+      <div class="carousel">
+        <div class="carousel-item" id="card-orange">
+          <h1>Blog Title</h1>
+          <p>Author and date</p>
+          <img src="https://i.ibb.co/NL00DkQ/pixlr-image-generator-am-car.png" alt="pixlr-image-generator-am-car"/>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste vitae voluptatum quos odit magni possimus at fugit veritatis expedita quaerat atque, eum, et dolor perferendis aut! Veniam, molestiae vitae. Nesciunt.</p>
+        </div>
+        <div class="carousel-item" id="card-pink">
+          <h1>Blog Title</h1>
+          <p>Author and date</p>
+          <img src="https://i.ibb.co/x737kBc/pixlr-image-generator-wannab-mario.png" alt="pixlr-image-generator-wannab-mario"/>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias molestias dignissimos voluptas veniam eum odit blanditiis rem fugit perspiciatis, eius eligendi aliquid praesentium sit velit culpa? Repellat suscipit minima inventore.</p>
+        </div>
+        <div class="carousel-item" id="card-yellow">
+          <h1>Blog Title</h1>
+          <p>Author and date</p>
+          <img src="https://i.ibb.co/89Nkk9c/pixlr-image-generator-poke-caps.png" alt="pixlr-image-generator-poke-caps"/>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, nam delectus alias impedit odit sed voluptatum rerum quisquam pariatur fugiat placeat maiores velit. Ducimus numquam perferendis vel, deserunt at consectetur.</p>
+        </div>
+        <button class="next"><svg width="24" height="24" viewBox="0 0 256 256">
+          <path fill="black" d="m221.66 133.66l-72 72a8 8 0 0 1-11.32-11.32L196.69 136H40a8 8 0 0 1 0-16h156.69l-58.35-58.34a8 8 0 0 1 11.32-11.32l72 72a8 8 0 0 1 0 11.32" aria-label="Next Icon"/>
+        </svg></button>
+        <button class="prev"><svg width="24" height="24" viewBox="0 0 256 256">
+            <path fill="black" d="M224 128a8 8 0 0 1-8 8H59.31l58.35 58.34a8 8 0 0 1-11.32 11.32l-72-72a8 8 0 0 1 0-11.32l72-72a8 8 0 0 1 11.32 11.32L59.31 120H216a8 8 0 0 1 8 8" aria-label="Previous Icon"/>
+        </svg></button>
+      </div>
+      <section class="blog-feed">
+        <h2>Pixl Feed</h2>
+        <div class="blog-post" id="minicard-pink">
+          <div class="thumbnail"><img src="https://i.ibb.co/NL00DkQ/pixlr-image-generator-am-car.png" alt="pixlr-image-generator-am-car"></div>
+          <div class="post-info">
+            <h3>Title of Blogpost</h3>
+            <p>Short summary of the Blogpost</p>
+          </div>
+        </div>
+        <div class="blog-post" id="minicard-yellow">
+          <div class="thumbnail"><img src="https://i.ibb.co/LZJstd8/pixlr-image-generator-planecrash.png" alt="pixlr-image-generator-planecrash"></div>
+          <div class="post-info">
+            <h3>Title of Blogpost</h3>
+            <p>Short summary of the Blogpost</p>
+          </div>
+        </div>
+        <div class="blog-post" id="minicard-orange">
+          <div class="thumbnail"><img src="https://i.ibb.co/x737kBc/pixlr-image-generator-wannab-mario.png" alt="pixlr-image-generator-wannab-mario"></div>
+          <div class="post-info">
+            <h3>Title of Blogpost</h3>
+            <p>Short summary of the Blogpost</p>
+          </div>
+        </div>
+        <div class="blog-post" id="minicard-pink">
+          <div class="thumbnail"><img src="https://i.ibb.co/NL00DkQ/pixlr-image-generator-am-car.png" alt="pixlr-image-generator-am-car"></div>
+          <div class="post-info">
+            <h3>Title of Blogpost</h3>
+            <p>Short summary of the Blogpost</p>
+          </div>
+        </div>
+        <div class="blog-post" id="minicard-yellow">
+          <div class="thumbnail"><img src="https://i.ibb.co/LZJstd8/pixlr-image-generator-planecrash.png" alt="pixlr-image-generator-planecrash"></div>
+          <div class="post-info">
+            <h3>Title of Blogpost</h3>
+            <p>Short summary of the Blogpost</p>
+          </div>
+        </div>
+        <div class="blog-post" id="minicard-orange">
+          <div class="thumbnail"><img src="https://i.ibb.co/x737kBc/pixlr-image-generator-wannab-mario.png" alt="pixlr-image-generator-wannab-mario"></div>
+          <div class="post-info">
+            <h3>Title of Blogpost</h3>
+            <p>Short summary of the Blogpost</p>
+          </div>
+        </div>
+        <div class="blog-post" id="minicard-pink">
+          <div class="thumbnail"><img src="https://i.ibb.co/NL00DkQ/pixlr-image-generator-am-car.png" alt="pixlr-image-generator-am-car"></div>
+          <div class="post-info">
+            <h3>Title of Blogpost</h3>
+            <p>Short summary of the Blogpost</p>
+          </div>
+        </div>
+        <div class="blog-post" id="minicard-yellow">
+          <div class="thumbnail"><img src="https://i.ibb.co/LZJstd8/pixlr-image-generator-planecrash.png" alt="pixlr-image-generator-planecrash"></div>
+          <div class="post-info">
+            <h3>Title of Blogpost</h3>
+            <p>Short summary of the Blogpost</p>
+          </div>
+        </div>
+        <div class="blog-post" id="minicard-orange">
+          <div class="thumbnail"><img src="https://i.ibb.co/x737kBc/pixlr-image-generator-wannab-mario.png" alt="pixlr-image-generator-wannab-mario"></div>
+          <div class="post-info">
+            <h3>Title of Blogpost</h3>
+            <p>Short summary of the Blogpost</p>
+          </div>
+        </div>
+        
+      </section>
     </main>
     <footer>
       <div class="footer-logo">

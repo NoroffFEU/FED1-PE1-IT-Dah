@@ -1,47 +1,50 @@
-doFetch('POST', 'https://v2.api.noroff.dev/auth/login', )
+import { doFetch } from '../components/fetch.js';
 
-const loginForm = document.querySelector('.login-form');
+document.addEventListener('DOMContentLoaded', () => {
+  const loginForm = document.querySelector('.login-form form');
 
-loginForm.addEventListener('submit', async (event) => {
-  event.preventDefault();
+  loginForm.addEventListener('submit', async (event) => {
+    event.preventDefault();
 
-  const email = document.querySelector('#email').value;
-  const password = document.querySelector('#password').value;
+    const email = document.querySelector('#email').value;
+    const password = document.querySelector('#password').value;
 
-  try {
-    const response = await fetch('https://v2.api.noroff.dev/auth/login', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({ email, password })
-    });
+    try {
+      const data = await doFetch('POST', 'https://v2.api.noroff.dev/auth/login', { email, password });
 
-    if (!response.ok) {
-      throw new Error('Login failed');
+      const token = data.token;
+
+      // Store user information in local storage
+      localStorage.setItem('userInfo', JSON.stringify({ token }));
+
+      // Redirect to the create-post page
+      window.location.href = '/post/create-post.html';
+    } catch (error) {
+      console.error('Error:', error.message);
+      // Display an error message to the user
+      document.querySelector('#error-message').innerText = 'Login failed. Please try again.';
     }
+  });
 
-    const data = await response.json();
-    const token = data.token;
+  // Function to toggle sign-in state
+  function toggleSignInState(isSignedIn) {
+    const signedOutHeader = document.getElementById('signedOutHeader');
+    const signedInHeader = document.getElementById('signedInHeader');
 
-    localStorage.setItem('token', token);
+    if (isSignedIn) {
+      signedOutHeader.style.display = 'none';
+      signedInHeader.style.display = 'block';
+    } else {
+      signedOutHeader.style.display = 'block';
+      signedInHeader.style.display = 'none';
+    }
+  }
 
-    window.location.href = '/post/create-post.html';
-  } catch (error) {
-    console.error('Error:', error.message);
-    document.querySelector('#error-message').innerText = 'Login failed. Please try again.';
+  // Example usage of toggleSignInState
+  const userInfo = JSON.parse(localStorage.getItem('userInfo'));
+  if (userInfo && userInfo.token) {
+    toggleSignInState(true);
+  } else {
+    toggleSignInState(false);
   }
 });
-
-function toggleSignInState(isSignedIn) {
-  const signedOutHeader = document.getElementById('signedOutHeader');
-  const signedInHeader = document.getElementById('signedInHeader');
-  
-  if (isSignedIn) {
-    signedOutHeader.style.display = 'none';
-    signedInHeader.style.display = 'block';
-  } else {
-    signedOutHeader.style.display = 'block';
-    signedInHeader.style.display = 'none';
-  }
-}

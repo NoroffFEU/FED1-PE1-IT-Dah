@@ -19,10 +19,9 @@ export const doFetch = async (method, noroffapi, body) => {
         }
 
         const data = await response.json();
-        console.log(data);
-    }
-    catch (error) {
+        return data;
+    } catch (error) {
         console.error('Error during fetch:', error);
         throw error;
     }
-}
+};
