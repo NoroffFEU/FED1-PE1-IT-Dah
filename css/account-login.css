@@ -1,5 +1,14 @@
 /* login.html */
 
+#signedOutHeader,
+#signedInHeader {
+  display: flex;
+  width: 70%;
+  justify-content: space-evenly;
+  align-items:flex-end;
+  margin: auto;
+}
+
 main {
     display: flex;
     flex-direction: column;
