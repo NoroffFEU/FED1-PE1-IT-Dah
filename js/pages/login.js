@@ -33,9 +33,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (isSignedIn) {
       signedOutHeader.style.display = 'none';
-      signedInHeader.style.display = 'block';
+      signedInHeader.style.display = 'flex';
     } else {
-      signedOutHeader.style.display = 'block';
+      signedOutHeader.style.display = 'flex';
       signedInHeader.style.display = 'none';
     }
   }
