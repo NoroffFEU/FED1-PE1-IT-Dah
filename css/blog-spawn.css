@@ -1,0 +1,42 @@
+/* create-post.html */
+
+.post-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .post-container h1 {
+    text-align: center;
+  }
+  
+  .post-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+  }
+  
+  .post-container input {
+    margin: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+  }
+  
+  .post-container textarea {
+    margin: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+  }
+  
+  .post-container button {
+    margin: 10px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    background-color: #574075; 
+    color: white;
+    font-weight: bold;
+  }

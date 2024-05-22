@@ -1,0 +1,10 @@
+/* login.html */
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    width: 335px;
+    width: 100%;
+  }

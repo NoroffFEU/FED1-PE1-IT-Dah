@@ -1,0 +1,24 @@
+/* post/index.html */
+
+.post-container {
+    align-items: center;
+    justify-content: center;
+  }
+  .post-header {
+    background: url('https://i.ibb.co/RpDVn1s/background-image.jpg') no-repeat center/cover;
+    display: block;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    border: 1px solid white;
+  }
+  
+  .post-header h1, .post-header p {
+    margin: 10px;
+    color: white;
+  }
+  
+  .post-blog {
+    margin: 25px 70px;
+    text-align: center;
+  }
