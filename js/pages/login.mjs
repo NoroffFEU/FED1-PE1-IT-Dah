@@ -1,4 +1,4 @@
-import { doFetch } from '../components/fetch.js';
+import { doFetch } from '../components/fetch.mjs';
 
 document.addEventListener('DOMContentLoaded', () => {
   const loginForm = document.querySelector('.login-form form');

@@ -51,31 +51,32 @@
         </div>
         <div class="post-form">
           <form action="/post/create-post" method="POST" id="uploadForm" enctype="multipart/form-data">
-            <div class="form-group">
-              <label for="title">Blog Title</label>
-              <input type="text" id="title" name="title" />
+            <div class="form-group" id="blog-title">
+              <label for="title"></label>
+              <input type="text" id="title" name="title" placeholder="Blog Title"/>
             </div>
-            <div class="form-group">
-              <label for="name">Your Name</label>
-              <input type="text" id="name" name="name" />
+            <div class="form-group" id="your-name">
+              <label for="name"></label>
+              <input type="text" id="name" name="name" placeholder="Your Name" />
             </div>
-            <div class="form-group">
-              <label for="content">Write your content here....</label>
-              <textarea id="content" name="content"></textarea>
+            <div class="form-group" id="content">
+              <label for="content"></label>
+              <textarea id="content" name="content" placeholder="Write your content here..."></textarea>
             </div>
-            <div class="date">
-              <label for="date">Date</label>
-              <input type="date" id="date" name="date" />
+            <div class="form-group" id="date">
+              <label for="date"></label>
+              <input type="date" id="date" name="date"/>
             </div>
-            <div class="add-image">
+            <div class="form-group" id="add-image">
               <label for="image">Add Image</label>
               <input type="file" id="image" name="image" />
             </div>
-            <div class="form-group">
+            <div class="form-group" id="button">
               <button type="submit">Submit</button>
             </div>
           </form>
-          
+        </div>
+      </div>
     </main>
     <footer>
       <div class="footer-logo">

@@ -1,42 +1,50 @@
-/* create-post.html */
-
 .post-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .post-container h1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0;
+    padding: 0;
+}
+
+.post-header {
+    grid-area: span 1 / span 2 / span 1 / span 2;
+    margin: 0;
+    padding: 0;
     text-align: center;
-  }
-  
-  .post-container form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 20px;
-  }
-  
-  .post-container input {
-    margin: 10px;
-    padding: 5px;
-    border-radius: 5px;
-    border: none;
-  }
-  
-  .post-container textarea {
-    margin: 10px;
-    padding: 5px;
-    border-radius: 5px;
-    border: none;
-  }
-  
-  .post-container button {
-    margin: 10px;
-    padding: 10px 15px;
-    border-radius: 5px;
-    border: none;
-    background-color: #574075; 
-    color: white;
-    font-weight: bold;
-  }
+}
+
+.form-group label, input {
+  text-align: left;
+  width: 100%;
+  height: 45px;
+  border-radius: 10px;
+}
+
+#uploadForm {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 2fr 1fr;
+}
+
+#blog-title {
+  grid-area: 1 / 1 / 1 / 7;
+}
+
+#your-name {
+  grid-area: 2 / 1 / 2 / 4;
+}
+
+#date {
+  grid-area: 2 / 4 / 2 / 7;
+}
+
+#content {
+  grid-area: 3 / 1 / 3 / 7;
+}
+
+#add-image {
+  grid-area: 4 / 1;
+}
+
+#button {
+  grid-area: 4 / 2;
+}
