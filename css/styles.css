@@ -318,6 +318,31 @@ form {
   font-weight: bold;
 }
 
+/* post/index.html */
+
+.post-container {
+  align-items: center;
+  justify-content: center;
+}
+.post-header {
+  background: url('https://i.ibb.co/RpDVn1s/background-image.jpg') no-repeat center/cover;
+  display: block;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  border: 1px solid white;
+}
+
+.post-header h1, .post-header p {
+  margin: 10px;
+  color: white;
+}
+
+.post-blog {
+  margin: 25px 70px;
+  text-align: center;
+}
+
 /* media queries */
 
 @media (min-width: 825px) {
@@ -395,63 +420,63 @@ form {
   top: 30%;
   transform: translateY(-30%);
   z-index: 1;
-}
+  }
 
-.prev {
-  left: 10px;
-}
+  .prev {
+    left: 10px;
+  }
 
-.next {
-  right: 10px;
-}
+  .next {
+    right: 10px;
+  }
 
-/* Pixl Feed */
+  /* Pixl Feed */
 
-.blog-feed {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 40px 1fr 1fr 1fr 1fr;
-  gap: 10px;
-  margin: 0;
-  padding: 0;
-}
+  .blog-feed {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 40px 1fr 1fr 1fr 1fr;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+  }
 
-.blog-feed h2 {
-  grid-column: 1 / 4;
-}
+  .blog-feed h2 {
+    grid-column: 1 / 4;
+  }
 
-.blog-post {
-  width: 94%;
-  max-height: 62px;
-  margin: auto;
-}
+  .blog-post {
+    width: 94%;
+    max-height: 62px;
+    margin: auto;
+  }
 
-.blog-post img {
-  max-height: 60px;
-}
+  .blog-post img {
+    max-height: 60px;
+  }
 
-.post-info h3 {
-  width: 100%;
-}
+  .post-info h3 {
+    width: 100%;
+  }
 
-#minicard-purple {
-  padding: 10px 10px 15px 10px;
-  grid-area: 2;
-}
+  #minicard-purple {
+    padding: 10px 10px 15px 10px;
+    grid-area: 2;
+  }
 
-#minicard-pink {
-  padding: 10px 10px 15px 10px;
-  grid-area: 3;
-}
+  #minicard-pink {
+    padding: 10px 10px 15px 10px;
+    grid-area: 3;
+  }
 
-#minicard-yellow {
-  padding: 10px 10px 15px 10px;
-  grid-area: 4;
-}
+  #minicard-yellow {
+    padding: 10px 10px 15px 10px;
+    grid-area: 4;
+  }
 
-#minicard-orange {
-  padding: 10px 10px 15px 10px;
-  grid-area: 5;
-}
+  #minicard-orange {
+    padding: 10px 10px 15px 10px;
+    grid-area: 5;
+  }
 
 }

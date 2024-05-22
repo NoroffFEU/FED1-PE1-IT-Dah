@@ -7,7 +7,7 @@
         "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9",
         "eyJuYW1lIjoiSXREYWgiLCJlbWFpbCI6Iml0ZGFoQHN0dWQubm9yb2ZmLm5vIiwiaWF0IjoxNzE1MzI3MDE5fQ"
     ],
-    "vscode-pets.theme": "none",
+    "vscode-pets.theme": "beach",
     "vscode-pets.throwBallWithMouse": true,
-    "vscode-pets.petSize": "small"
+    "vscode-pets.petSize": "medium"
 }
