@@ -9,5 +9,6 @@
     ],
     "vscode-pets.theme": "beach",
     "vscode-pets.throwBallWithMouse": true,
-    "vscode-pets.petSize": "medium"
+    "vscode-pets.petSize": "medium",
+    "prettier.enableDebugLogs": true
 }
