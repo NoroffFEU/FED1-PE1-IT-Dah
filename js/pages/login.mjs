@@ -6,24 +6,20 @@ document.addEventListener('DOMContentLoaded', () => {
   loginForm.addEventListener('submit', async (event) => {
     event.preventDefault();
 
-    const email = document.querySelector('#email').value;
-    const password = document.querySelector('#password').value;
-
-    try {
-      const data = await doFetch('POST', 'https://v2.api.noroff.dev/auth/login', { email, password });
-
-      const token = data.token;
+const formData = new FormData(loginForm);
+    const postdata = { 
+      email: formData.get('email'),
+      password: formData.get('password')
+    };
+    
+      const data = await doFetch('POST', 'https://v2.api.noroff.dev/auth/login', postdata );
+console.log(data);
 
       // Store user information in local storage
-      localStorage.setItem('userInfo', JSON.stringify({ token }));
+      localStorage.setItem('userInfo', JSON.stringify(data.data));
 
       // Redirect to the create-post page
-      window.location.href = '/post/create-post.html';
-    } catch (error) {
-      console.error('Error:', error.message);
-      // Display an error message to the user
-      document.querySelector('#error-message').innerText = 'Login failed. Please try again.';
-    }
+      window.location.href = '/index.html';
   });
 
   // Function to toggle sign-in state
