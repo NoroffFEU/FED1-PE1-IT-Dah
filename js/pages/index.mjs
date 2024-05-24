@@ -1,47 +1,47 @@
 import { doFetch } from "../components/fetch.mjs";
 
+const colors = ["#574075", "#953775", "#ffdc98", "#d59f77"];
+
 // Function to create a single blog post slide for the carousel
-function createBlogPostSlide(post) {
+function createBlogPostSlide(post, color) {
   console.log("Creating slide for post:", post); // Log post data for debugging
   const slide = document.createElement("li");
   slide.className = "slides";
-  slide.id = `card-${post.color || "default"}`; // Use a default value if color is missing
+  slide.style.backgroundColor = color;
+  slide.id = `card-${post.color || "default"}`;
   slide.innerHTML = `
-        <h1>${post.title || "No Title"}</h1>
-
-        <p>${post.author.name || "Unknown Author"} - ${
-    post.published_at
-      ? new Date(post.published_at).toLocaleDateString()
-      : "Unknown Date"
+    <h1>${post.title || "No Title"}</h1>
+    <p>${post.author.name || "Unknown Author"} - ${
+    post.created ? new Date(post.created).toLocaleDateString() : "Unknown Date"
   }</p>
-
-        <img src="${post.media.url || "../images/fallback-image.png"}" alt="${
+    <img src="${post.media.url || "../images/fallback-image.png"}" alt="${
     post.title || "No Title"
   }" onerror="this.onerror=null;this.src='../images/fallback-image.png';" />
-
-        <p class="body">${post.body || "No text available"}</p>
-    `;
+    <p class="body">${post.body || "No text available"}</p>
+  `;
   return slide;
 }
 
 // Function to create a single blog post card for the feed
-function createBlogPostCard(post) {
+function createBlogPostCard(post, color) {
   console.log("Creating card for post:", post); // Log post data for debugging
   const card = document.createElement("div");
   card.className = "blog-post";
+  card.style.backgroundColor = color; // Set background color
   card.id = `minicard-${post.color || "default"}`; // Use a default value if color is missing
   card.innerHTML = `
-        <div class="thumbnail"><img src="${
-          post.media.url || "../images/fallback-image.png"
-        }" alt="${
+    <div class="thumbnail"><img src="${
+      post.media.url || "../images/fallback-image.png"
+    }" alt="${
     post.title || "No Title"
   }" onerror="this.onerror=null;this.src='../images/fallback-image.png';"></div>
-        
-        <div class="post-info">
-            <h3>${post.title || "No Title"}</h3>
-            <p>${post.body || "No text available"}</p>
-        </div>
-    `;
+    <div class="post-info">
+      <h3>${post.title || "No Title"}</h3>
+      <p>${post.author.name || "Unknown Author"} - ${
+    post.created ? new Date(post.created).toLocaleDateString() : "Unknown Date"
+  }</p>
+    </div>
+  `;
   return card;
 }
 
@@ -75,16 +75,18 @@ async function fetchBlogPosts() {
       const latestPosts = sortedPosts.slice(0, 3);
 
       latestPosts.forEach((post, index) => {
-        const slide = createBlogPostSlide(post);
+        const slide = createBlogPostSlide(post, colors[index % colors.length]);
         if (index === 0) {
           slide.dataset.active = true; // Set the first slide as active
         }
         slidesContainer.appendChild(slide);
       });
 
-      // Add all posts to the feed
-      sortedPosts.forEach((post) => {
-        const card = createBlogPostCard(post);
+      // Get the latest 12 blog posts for the feed
+      const latestFeedPosts = sortedPosts.slice(0, 12);
+
+      latestFeedPosts.forEach((post, index) => {
+        const card = createBlogPostCard(post, colors[index % colors.length]);
         feedContainer.appendChild(card);
       });
     } else {
