@@ -9,7 +9,7 @@ const runPage = () => {
         const formData = new FormData(form);
         const postData = {
             title: formData.get("title"),
-            body: formData.get("content"),
+            body: formData.get("body"),
             name: formData.get("name"),
             media: {
                 url: formData.get("post-image-url"),
@@ -19,6 +19,8 @@ const runPage = () => {
 
         try {
             const response = await doFetch("POST", `https://v2.api.noroff.dev/blog/posts/ItDah`, postData);
+            window.alert("Post created successfully");
+            window.location.href = "../index.html";
             console.log('Post created successfully:', response);
         } catch (error) {
             console.error('Error creating post:', error);

@@ -1,6 +1,6 @@
 {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnSave": false,
+    "editor.formatOnSave": true,
     "cSpell.ignoreWords": [
         "XVCJ",
         "agYc4LwhL84QeNjebg3_nQEQBIs4YOiHgiwUBU7fIBE",

@@ -8,7 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/css/styles.css"/>
-  <link rel="stylesheet" href="/css/blog-spawn.css"/>
+  <link rel="stylesheet" href="/css/create-post.css"/>
   <script type="module" src="/js/components/isSignedIn.mjs"></script>
   <script type="module" src="/js/pages/create-post.mjs"></script>
   <title>Blog Spawn Page</title>
@@ -85,22 +85,27 @@
         </div>
         <div class="post-form" id="create-post">
           <form action="/post/create-post.html" method="POST" id="uploadForm" enctype="multipart/form-data">
+
             <div class="form-group" id="blog-title">
               <label for="title"></label>
               <input type="text" id="title" name="title" placeholder="Blog Title"/>
             </div>
+
             <div class="form-group" id="your-name">
               <label for="name"></label>
               <input type="text" id="name" name="name" placeholder="Your Name" />
             </div>
+
             <div class="form-group" id="body">
               <label for="body"></label>
               <textarea id="body" name="body" placeholder="Write your content here..."></textarea>
             </div>
+
             <div class="form-group" id="post-image-url">
               <label for="post-image-url"></label>
               <input type="text" id="post-image-url" name="post-image-url" placeholder="Enter image URL">
             </div>
+            
             <div class="form-group" id="button">
               <button type="submit">Submit</button>
             </div>
