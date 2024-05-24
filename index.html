@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="/css/styles.css"/>
   <link rel="stylesheet" href="/css/index.css"/>
   <script type="module" src="/js/components/isSignedIn.mjs"></script>
+  <script type="module" src="/js/pages/index.mjs"></script>
   <title>Blog Feed Page</title>
 </head>
 <body>
@@ -77,134 +78,31 @@
       </div>
     </nav>
   </header>
-    <main>
-      <section class="blog-gallery">
-        <div class="carousel" data-carousel>
-          <ul data-slides>
-            <li class="slides" data-active id="card-orange">
-              <h1>Blog Title</h1>
-              <p>Author and date</p>
-              <img src="https://i.ibb.co/NL00DkQ/pixlr-image-generator-am-car.png" alt="pixlr-image-generator-am-car"/>
-              <p class="summary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste vitae voluptatum quos odit magni possimus at fugit veritatis expedita quaerat atque, eum, et dolor perferendis aut! Veniam, molestiae vitae. Nesciunt.</p>
-            </li>
-            <li class="slides" id="card-pink">
-              <h1>Blog Title</h1>
-              <p>Author and date</p>
-              <img src="https://i.ibb.co/x737kBc/pixlr-image-generator-wannab-mario.png" alt="pixlr-image-generator-wannab-mario"/>
-              <p class="summary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias molestias dignissimos voluptas veniam eum odit blanditiis rem fugit perspiciatis, eius eligendi aliquid praesentium sit velit culpa? Repellat suscipit minima inventore.</p>
-            </li>
-            <li class="slides" id="card-yellow">
-              <h1>Blog Title</h1>
-              <p>Author and date</p>
-              <img src="https://i.ibb.co/89Nkk9c/pixlr-image-generator-poke-caps.png" alt="pixlr-image-generator-poke-caps"/>
-              <p class="summary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, nam delectus alias impedit odit sed voluptatum rerum quisquam pariatur fugiat placeat maiores velit. Ducimus numquam perferendis vel, deserunt at consectetur.</p>
-            </li>
-          </ul>
-          <button class="carousel-button prev" data-carousel-button="prev">
-            <svg width="24" height="24" viewBox="0 0 256 256">
-              <path fill="black" d="M224 128a8 8 0 0 1-8 8H59.31l58.35 58.34a8 8 0 0 1-11.32 11.32l-72-72a8 8 0 0 1 0-11.32l72-72a8 8 0 0 1 11.32 11.32L59.31 120H216a8 8 0 0 1 8 8" aria-label="Previous Icon"/>
-            </svg>
-          </button>
-          <button class="carousel-button next" data-carousel-button="next">
-            <svg width="24" height="24" viewBox="0 0 256 256">
-              <path fill="black" d="m221.66 133.66l-72 72a8 8 0 0 1-11.32-11.32L196.69 136H40a8 8 0 0 1 0-16h156.69l-58.35-58.34a8 8 0 0 1 11.32-11.32l72 72a8 8 0 0 1 0 11.32" aria-label="Next Icon"/>
-            </svg>
-          </button>
-        </div>
-      </section>
-      
-      <section class="blog-feed">
-        <h2>Pixl Feed</h2>
-        <div class="blog-post" id="minicard-purple">
-          <div class="thumbnail"><img src="https://i.ibb.co/NL00DkQ/pixlr-image-generator-am-car.png" alt="pixlr-image-generator-am-car"></div>
-          <div class="post-info">
-            <h3>Title of Blogpost</h3>
-            <p>Short summary of the Blogpost</p>
-          </div>
-        </div>
-        <div class="blog-post" id="minicard-pink">
-          <div class="thumbnail"><img src="https://i.ibb.co/LZJstd8/pixlr-image-generator-planecrash.png" alt="pixlr-image-generator-planecrash"></div>
-          <div class="post-info">
-            <h3>Title of Blogpost</h3>
-            <p>Short summary of the Blogpost</p>
-          </div>
-        </div>
-        <div class="blog-post" id="minicard-orange">
-          <div class="thumbnail"><img src="https://i.ibb.co/x737kBc/pixlr-image-generator-wannab-mario.png" alt="pixlr-image-generator-wannab-mario"></div>
-          <div class="post-info">
-            <h3>Title of Blogpost</h3>
-            <p>Short summary of the Blogpost</p>
-          </div>
-        </div>
-        <div class="blog-post" id="minicard-yellow">
-          <div class="thumbnail"><img src="https://i.ibb.co/NL00DkQ/pixlr-image-generator-am-car.png" alt="pixlr-image-generator-am-car"></div>
-          <div class="post-info">
-            <h3>Title of Blogpost</h3>
-            <p>Short summary of the Blogpost</p>
-          </div>
-        </div>
-        <div class="blog-post" id="minicard-purple">
-          <div class="thumbnail"><img src="https://i.ibb.co/NL00DkQ/pixlr-image-generator-am-car.png" alt="pixlr-image-generator-am-car"></div>
-          <div class="post-info">
-            <h3>Title of Blogpost</h3>
-            <p>Short summary of the Blogpost</p>
-          </div>
-        </div>
-        <div class="blog-post" id="minicard-pink">
-          <div class="thumbnail"><img src="https://i.ibb.co/LZJstd8/pixlr-image-generator-planecrash.png" alt="pixlr-image-generator-planecrash"></div>
-          <div class="post-info">
-            <h3>Title of Blogpost</h3>
-            <p>Short summary of the Blogpost</p>
-          </div>
-        </div>
-        <div class="blog-post" id="minicard-orange">
-          <div class="thumbnail"><img src="https://i.ibb.co/x737kBc/pixlr-image-generator-wannab-mario.png" alt="pixlr-image-generator-wannab-mario"></div>
-          <div class="post-info">
-            <h3>Title of Blogpost</h3>
-            <p>Short summary of the Blogpost</p>
-          </div>
-        </div>
-        <div class="blog-post" id="minicard-yellow">
-          <div class="thumbnail"><img src="https://i.ibb.co/NL00DkQ/pixlr-image-generator-am-car.png" alt="pixlr-image-generator-am-car"></div>
-          <div class="post-info">
-            <h3>Title of Blogpost</h3>
-            <p>Short summary of the Blogpost</p>
-          </div>
-        </div>
-        <div class="blog-post" id="minicard-purple">
-          <div class="thumbnail"><img src="https://i.ibb.co/NL00DkQ/pixlr-image-generator-am-car.png" alt="pixlr-image-generator-am-car"></div>
-          <div class="post-info">
-            <h3>Title of Blogpost</h3>
-            <p>Short summary of the Blogpost</p>
-          </div>
-        </div>
-        <div class="blog-post" id="minicard-pink">
-          <div class="thumbnail"><img src="https://i.ibb.co/LZJstd8/pixlr-image-generator-planecrash.png" alt="pixlr-image-generator-planecrash"></div>
-          <div class="post-info">
-            <h3>Title of Blogpost</h3>
-            <p>Short summary of the Blogpost</p>
-          </div>
-        </div>
-        <div class="blog-post" id="minicard-orange">
-          <div class="thumbnail"><img src="https://i.ibb.co/x737kBc/pixlr-image-generator-wannab-mario.png" alt="pixlr-image-generator-wannab-mario"></div>
-          <div class="post-info">
-            <h3>Title of Blogpost</h3>
-            <p>Short summary of the Blogpost</p>
-          </div>
-        </div>
-        <div class="blog-post" id="minicard-yellow">
-          <div class="thumbnail"><img src="https://i.ibb.co/NL00DkQ/pixlr-image-generator-am-car.png" alt="pixlr-image-generator-am-car"></div>
-          <div class="post-info">
-            <h3>Title of Blogpost</h3>
-            <p>Short summary of the Blogpost</p>
-          </div>
-        </div>
-      </section>
-    </main>
-    <footer>
-      <div class="footer-logo">
-        <img src="https://i.ibb.co/rM38SfG/logo.png" alt="logo" />
+  <main>
+    <section class="blog-gallery">
+      <div class="carousel" data-carousel>
+        <ul data-slides></ul>
+        <button class="carousel-button prev" data-carousel-button="prev">
+          <svg width="24" height="24" viewBox="0 0 256 256">
+            <path fill="black" d="M224 128a8 8 0 0 1-8 8H59.31l58.35 58.34a8 8 0 0 1-11.32 11.32l-72-72a8 8 0 0 1 0-11.32l72-72a8 8 0 0 1 11.32 11.32L59.31 120H216a8 8 0 0 1 8 8"/>
+          </svg>
+        </button>
+        <button class="carousel-button next" data-carousel-button="next">
+          <svg width="24" height="24" viewBox="0 0 256 256">
+            <path fill="black" d="m221.66 133.66l-72 72a8 8 0 0 1-11.32-11.32L196.69 136H40a8 8 0 0 1 0-16h156.69l-58.35-58.34a8 8 0 0 1 11.32-11.32l72 72a8 8 0 0 1 0 11.32"/>
+          </svg>
+        </button>
       </div>
-    </footer>
-  </body>
+    </section>
+    
+    <section class="blog-feed">
+      <h2>Pixl Feed</h2>
+    </section>
+  </main>
+  <footer>
+    <div class="footer-logo">
+      <img src="https://i.ibb.co/rM38SfG/logo.png" alt="logo" />
+    </div>
+  </footer>
+</body>
 </html>

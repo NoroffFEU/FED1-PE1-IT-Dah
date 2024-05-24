@@ -1,4 +1,4 @@
-export const doFetch = async (method, noroffapi, body) => {
+export const doFetch = async (method, url, body = null) => {
     let userInfo = JSON.parse(localStorage.getItem('userInfo'));
     console.log(localStorage.getItem('userInfo'));
     let token = "";
@@ -6,17 +6,17 @@ export const doFetch = async (method, noroffapi, body) => {
         token = userInfo.accessToken;
     }
     try {
-        const response = await fetch(noroffapi, {
+        const response = await fetch(url, {
             method: method,
             headers: {
                 "Content-Type": "application/json",
-                Authorization: 'bearer ' + token
+                Authorization: 'Bearer ' + token
             },
-            body: JSON.stringify(body)
+            body: body ? JSON.stringify(body) : null
         });
 
         if (!response.ok) {
-            throw new Error("An error occurred");
+            throw new Error("An error occurred: " + response.statusText);
         }
 
         const data = await response.json();
