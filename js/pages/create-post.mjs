@@ -10,7 +10,6 @@ const runPage = () => {
         const postData = {
             title: formData.get("title"),
             body: formData.get("content"),
-            date: formData.get("date"),
             name: formData.get("name"),
             media: {
                 url: formData.get("post-image-url"),
