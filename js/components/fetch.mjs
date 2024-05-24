@@ -1,8 +1,9 @@
 export const doFetch = async (method, noroffapi, body) => {
     let userInfo = JSON.parse(localStorage.getItem('userInfo'));
+    console.log(localStorage.getItem('userInfo'));
     let token = "";
     if (userInfo) {
-        token = userInfo.token;
+        token = userInfo.accessToken;
     }
     try {
         const response = await fetch(noroffapi, {
