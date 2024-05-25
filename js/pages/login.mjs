@@ -18,8 +18,6 @@ console.log(data);
       // Store user information in local storage
       localStorage.setItem('userInfo', JSON.stringify(data.data));
 
-      localStorage.setItem('token', data.data.accessToken);
-
       // Redirect to the create-post page
       window.location.href = '/index.html';
   });
