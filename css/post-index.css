@@ -1,26 +1,43 @@
-/* post/index.html */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("https://i.ibb.co/RpDVn1s/background-image.jpg") no-repeat
+    center center/cover;
+  opacity: 0.7;
+  z-index: -1;
+}
 
-.post-container {
+.center-content {
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-.post-header {
-  background: url("https://i.ibb.co/RpDVn1s/background-image.jpg") no-repeat
-    center/cover;
-  display: block;
-  width: 100%;
-  margin: auto;
   text-align: center;
-  border: 1px solid white;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+  z-index: 1;
 }
 
-.post-header h1,
-.post-header p {
-  margin: 10px;
-  color: white;
+#post-container h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  padding: 0 50px;
 }
 
-.post-blog {
-  margin: 25px 70px;
-  text-align: center;
+#post-container p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  padding: 0 50px;
+}
+
+#post-container img {
+  max-width: 150px;
+  height: auto;
+  margin-bottom: 20px;
+  padding: 0 50px;
 }
