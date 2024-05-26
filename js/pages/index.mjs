@@ -3,7 +3,6 @@ import { doFetch } from "../components/fetch.mjs";
 const colors = ["#574075", "#953775", "#ffdc98", "#d59f77"];
 
 function createBlogPostSlide(post, color) {
-  console.log("Creating slide for post:", post);
   const slide = document.createElement("li");
   slide.className = "slides";
   slide.style.backgroundColor = color;
@@ -27,17 +26,16 @@ function createBlogPostSlide(post, color) {
 }
 
 function createBlogPostCard(post, color) {
-  console.log("Creating card for post:", post);
   const card = document.createElement("div");
   card.className = "blog-post";
   card.style.backgroundColor = color;
   card.id = `minicard-${post.id}`;
   card.innerHTML = `
-    <div class="thumbnail"><img src="${
-      post.media.url || "../images/fallback-image.png"
-    }" alt="${
+    <div class="thumbnail">
+      <img src="${post.media.url || "../images/fallback-image.png"}" alt="${
     post.title || "No Title"
-  }" onerror="this.onerror=null;this.src='../images/fallback-image.png';"></div>
+  }" onerror="this.onerror=null;this.src='../images/fallback-image.png';">
+    </div>
     <div class="post-info">
       <h3>${post.title || "No Title"}</h3>
       <p>${post.author.name || "Unknown Author"} - ${
