@@ -2,19 +2,10 @@ import { doFetch } from "../components/fetch.mjs";
 
 const colors = ["#574075", "#953775", "#ffdc98", "#d59f77"];
 
-// Function to determine text color based on background color
-function getTextColor(backgroundColor) {
-  return backgroundColor === "#ffdc98" || backgroundColor === "#d59f77"
-    ? "black"
-    : "white";
-}
-
 function createBlogPostSlide(post, color) {
-  const textColor = getTextColor(color);
   const slide = document.createElement("li");
   slide.className = "slides";
   slide.style.backgroundColor = color;
-  slide.style.color = textColor; // Set text color
   slide.id = `card-${post.color || "default"}`;
   slide.innerHTML = `
     <h1>${post.title || "No Title"}</h1>
@@ -35,11 +26,9 @@ function createBlogPostSlide(post, color) {
 }
 
 function createBlogPostCard(post, color) {
-  const textColor = getTextColor(color);
   const card = document.createElement("div");
   card.className = "blog-post";
   card.style.backgroundColor = color;
-  card.style.color = textColor; // Set text color
   card.id = `minicard-${post.id}`;
   card.innerHTML = `
     <div class="thumbnail">

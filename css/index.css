@@ -1,27 +1,13 @@
 /* Index.html */
 
-.carousel {
-  display: flex;
-  width: 100%;
-  height: 500px;
-  position: relative;
-}
-
-.carousel ul {
-  display: flex;
-  justify-content: center;
-  transition: transform 0.5s;
-  width: 100%;
-}
-
 .slides {
   display: grid;
   grid-template-columns: 0.2fr 3fr 0.2fr;
   grid-template-rows: 5px 35px 20px 170px 190px 5px;
   gap: 5px;
   min-width: 80%;
-  max-height: 500px;
-  margin: 10px 10px 15px 10px;
+  max-height: 600px;
+  margin: 10px 10px 30px 10px;
   border-radius: 10px;
 }
 
@@ -87,12 +73,43 @@
   right: 10px;
 }
 
+.pixl-feed-header {
+  color: #ffffff;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 30px;
+  padding: 5px 0px 10px 0px;
+  background-image: linear-gradient(
+    to right,
+    #000000 15%,
+    #574075 50%,
+    #000000 85%
+  );
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+}
+
+.pixl-feed-header h2 {
+  color: #ffffff;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  font-size: 32px;
+  font-weight: 500;
+  margin: 0;
+  padding: 5px 0px 10px 0px;
+}
+
 .blog-feed {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
   width: 100%;
+  justify-content: center;
 }
 
 .blog-feed h2 {
