@@ -1,51 +1,65 @@
-/* Index.html */
+/* carousel*/
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  margin: 30px auto;
+  width: 90%;
+}
 
 .slides {
-  display: grid;
-  grid-template-columns: 0.2fr 3fr 0.2fr;
-  grid-template-rows: 5px 35px 20px 170px 190px 5px;
+  list-style: none;
+  display: none;
   gap: 5px;
-  min-width: 80%;
+  justify-content: center;
+  text-align: center;
+  min-width: 900px;
   max-height: 600px;
-  margin: 10px 10px 30px 10px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.slides[data-active] {
+  display: block;
+  width: 650px;
+  height: 300px;
+}
+
+.slides img {
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  max-width: 150px;
+  width: 85%;
+  padding: 0;
   border-radius: 10px;
 }
 
 .slides h1 {
-  grid-area: 2 / 2 / 2 / 2;
-  margin: 0;
-  justify-self: center;
-  text-align: center;
-  align-items: center;
-}
-
-.slides p {
-  font-size: 12px;
-  grid-area: 3 / 2 / 3 / 2;
-  margin: 0;
-  justify-self: center;
-  text-align: center;
-}
-
-.slides img {
-  grid-area: 4 / 2 / 4 / 2;
-  justify-content: center;
-  align-items: center;
+  justify-items: center;
+  font-size: 32px;
   margin: auto;
-  width: 150px;
-  padding: 10px 0px 15px 0px;
+  width: 85%;
 }
 
 .slides .body {
-  grid-area: 5 / 2 / 5 / 2;
+  justify-content: right;
   font-size: 20px;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  flex-wrap: wrap;
-  margin: 0;
-  overflow: hidden;
+  padding: 10px;
+  margin: auto;
+  width: 50%;
 }
+
+.slides p {
+  justify-content: right;
+  font-size: 12px;
+  margin: auto;
+  padding: 10px;
+  width: 50%;
+}
+/* carousel buttons*/
 
 .prev,
 .next {
@@ -53,8 +67,8 @@
   color: black;
   border: none;
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -74,223 +88,65 @@
 }
 
 .pixl-feed-header {
-  color: #ffffff;
+  display: flex;
   justify-content: center;
-  text-align: center;
-  align-items: center;
-  font-size: 32px;
-  font-weight: 500;
-  margin-bottom: 30px;
-  padding: 5px 0px 10px 0px;
+  border-bottom: 1px solid #ffffff;
+  border-top: 1px solid #ffffff;
   background-image: linear-gradient(
     to right,
     #000000 15%,
     #574075 50%,
     #000000 85%
   );
-  border-top: 1px solid white;
-  border-bottom: 1px solid white;
+  margin: 10px 0 40px 0;
 }
-
-.pixl-feed-header h2 {
-  color: #ffffff;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-  font-size: 32px;
-  font-weight: 500;
-  margin: 0;
-  padding: 5px 0px 10px 0px;
-}
+/* blog feed */
 
 .blog-feed {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
   gap: 10px;
-  width: 100%;
-  justify-content: center;
-}
-
-.blog-feed h2 {
-  text-align: center;
-  border: 1px solid white;
-  background-image: linear-gradient(
-    to right,
-    #000000 15%,
-    #574075 50%,
-    #000000 85%
-  );
-  width: 100%;
-  margin: 0;
+  margin-bottom: 30px;
+  padding: 0;
 }
 
 .blog-post {
+  display: grid;
+  height: 100px;
+  grid-template-columns: 0.7fr 3fr;
+  grid-template-rows: 1fr;
+  width: 98%;
+  padding: 5px;
+  gap: 0;
+  margin: 0;
+}
+
+.post-info {
   display: flex;
-  flex-direction: row;
-  width: 85%;
-  margin: 20px;
-  border-radius: 5px;
-  margin: 0 15px;
-  padding: 15px;
-  padding-bottom: 20px;
-  gap: 20px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: left;
+  margin: auto 0;
 }
 
+.post-info h3 {
+  margin: 0;
+  padding: 0 10px 0 10px;
+  font-size: 18px;
+}
+
+.post-info p {
+  margin: 0;
+  padding: 5px 10px 0 10px;
+  font-size: 12px;
+}
+
+.thumbnail,
 .thumbnail img {
-  max-width: 100px;
-}
-
-@media (min-width: 825px) {
-  /*Header*/
-
-  #signedOutHeader,
-  #signedInHeader {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-row: 1fr;
-  }
-
-  /*Carousel*/
-
-  .carousel {
-    display: flex;
-    width: 100%;
-    height: 300px;
-    position: relative;
-  }
-
-  .carousel ul {
-    display: flex;
-    justify-content: center;
-    transition: transform 0.5s;
-    width: 100%;
-  }
-
-  .carousel li {
-    padding: 0;
-  }
-
-  .slides {
-    display: grid;
-    grid-template-columns: 0.7fr 3fr;
-    grid-template-rows: 15px 40px 25px 130px 5px;
-    gap: 10px;
-    min-width: 80%;
-    max-height: 300px;
-  }
-
-  .slides img {
-    grid-area: 3 / 1 / 3 / 1;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    width: 150px;
-    padding: 0;
-  }
-
-  .slides h1 {
-    grid-area: 2 / 1 / 2 / 3;
-    margin: 0;
-    margin-right: 10px;
-    justify-self: center;
-    font-size: 32px;
-  }
-
-  .slides p {
-    font-size: 12px;
-    grid-area: 3 / 2 / 3 / 2;
-    margin: 0;
-    margin-right: 10px;
-    justify-self: left;
-  }
-
-  .slides .body {
-    font-size: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0;
-    margin-right: 10px;
-    grid-area: 4 / 2 / span 2 / 2;
-    overflow: hidden;
-    text-align: left;
-    padding-right: 10px;
-  }
-
-  .prev,
-  .next {
-    background-color: white;
-    color: black;
-    border: none;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 1;
-  }
-
-  .prev {
-    left: 10px;
-  }
-
-  .next {
-    right: 10px;
-  }
-
-  /* Pixl Feed */
-
-  .blog-feed {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    gap: 10px;
-    margin: 0;
-    padding: 0;
-  }
-
-  .blog-post {
-    display: grid;
-    height: 100px;
-    grid-template-columns: 0.7fr 3fr;
-    grid-template-rows: 1fr;
-    width: 98%;
-    padding: 5px;
-    gap: 0;
-    margin: 0;
-  }
-
-  .post-info {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    text-align: left;
-    margin: auto 0;
-  }
-
-  .post-info h3 {
-    margin: 0;
-    padding: 0 10px 0 10px;
-    font-size: 18px;
-  }
-
-  .post-info p {
-    margin: 0;
-    padding: 5px 10px 0 10px;
-    font-size: 12px;
-  }
-
-  .thumbnail,
-  .thumbnail img {
-    grid-area: 1 / 1;
-    max-width: 60px;
-    margin: auto;
-    padding: 5px;
-  }
+  grid-area: 1 / 1;
+  max-width: 60px;
+  margin: auto;
+  padding: 5px;
 }
