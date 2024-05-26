@@ -2,9 +2,11 @@ export const isSignedIn = () => {
   function toggleSignInState(isSignedIn) {
     const signedOutHeader = document.getElementById("signedOutHeader");
     const signedInHeader = document.getElementById("signedInHeader");
-    const signOutButton = document.getElementById("sign-out-button");
+    const signOutButtonContainer = document.getElementById(
+      "sign-out-button-container"
+    );
 
-    signOutButton.addEventListener("click", () => {
+    signOutButtonContainer.addEventListener("click", () => {
       localStorage.removeItem("userInfo");
       window.location.href =
         window.location.pathname.includes("post") ||

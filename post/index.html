@@ -23,14 +23,13 @@
       <nav>
         <!-- Header content for signed out -->
         <div id="signedOutHeader">
-          <ul>
+          <ul class="left">
             <li>
               <a href="/index.html">
                 <svg width="24px" height="24px" viewBox="0 0 24 24">
                   <path
                     fill="#ffffff"
-                    d="M20 10a1 1 0 1 0-2 0zM6 10a1 1 0 0 0-2 0zm14.293 2.707a1 1 0 0 0 1.414-1.414zM12 3l.707-.707a1 1 0 0 0-1.414 0zm-9.707 8.293a1 1 0 1 0 1.414 1.414zM7 22h10v-2H7zm13-3v-9h-2v9zM6 19v-9H4v9zm15.707-7.707l-9-9l-1.414 1.414l9 9zm-10.414-9l-9 9l1.414 1.414l9-9zM17 22a3 3 0 0 0 3-3h-2a1 1 0 0 1-1 1zM7 20a1 1 0 0 1-1-1H4a3 3 0 0 0 3 3z"
-                    aria-label="Home Icon" />
+                    d="M20 10a1 1 0 1 0-2 0zM6 10a1 1 0 0 0-2 0zm14.293 2.707a1 1 0 0 0 1.414-1.414zM12 3l.707-.707a1 1 0 0 0-1.414 0zm-9.707 8.293a1 1 0 1 0 1.414 1.414zM7 22h10v-2H7zm13-3v-9h-2v9zM6 19v-9H4v9zm15.707-7.707l-9-9l-1.414 1.414l9 9zm-10.414-9l-9 9l1.414 1.414l9-9zM17 22a3 3 0 0 0 3-3h-2a1 1 0 0 1-1 1zM7 20a1 1 0 0 1-1-1H4a3 3 0 0 0 3 3z"></path>
                 </svg>
                 <p>Home</p>
               </a>
@@ -39,14 +38,13 @@
           <div class="header-logo">
             <img src="https://i.ibb.co/rM38SfG/logo.png" alt="logo" />
           </div>
-          <ul>
+          <ul class="right">
             <li>
               <a href="/account/login.html">
                 <svg width="24px" height="24px" viewBox="0 0 24 24">
                   <path
                     fill="#ffffff"
-                    d="M12 4a3.5 3.5 0 1 0 0 7a3.5 3.5 0 0 0 0-7M6.5 7.5a5.5 5.5 0 1 1 11 0a5.5 5.5 0 0 1-11 0M3 19a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v3H3zm5-3a3 3 0 0 0-3 3v1h14v-1a3 3 0 0 0-3-3z"
-                    aria-label="Sign In Icon" />
+                    d="M12 4a3.5 3.5 0 1 0 0 7a3.5 3.5 0 0 0 0-7M6.5 7.5a5.5 5.5 0 1 1 11 0a5.5 5.5 0 0 1-11 0M3 19a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v3H3zm5-3a3 3 0 0 0-3 3v1h14v-1a3 3 0 0 0-3-3z"></path>
                 </svg>
                 <p>Sign In</p>
               </a>
@@ -91,22 +89,26 @@
                 <p>Blog Spawn</p>
               </a>
             </li>
+          </ul>
+          <ul>
             <li>
-              <svg
-                id="sign-out-button"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24">
-                <path
-                  fill="none"
-                  stroke="white"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="1.5"
-                  d="M13.496 21H6.5c-1.105 0-2-1.151-2-2.571V5.57c0-1.419.895-2.57 2-2.57h7M16 15.5l3.5-3.5L16 8.5m-6.5 3.496h10" />
-              </svg>
-              <p>Sign Out</p>
+              <div id="sign-out-button-container">
+                <svg
+                  id="sign-out-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24">
+                  <path
+                    fill="none"
+                    stroke="white"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="M13.496 21H6.5c-1.105 0-2-1.151-2-2.571V5.57c0-1.419.895-2.57 2-2.57h7M16 15.5l3.5-3.5L16 8.5m-6.5 3.496h10" />
+                </svg>
+                <p id="sign-out-text">Sign Out</p>
+              </div>
             </li>
           </ul>
         </div>
