@@ -110,76 +110,8 @@ li {
 main {
   flex: 1 0 auto;
   color: white;
-  width: 100%; /* Ensure main takes full width */
-  overflow-x: hidden; /* Prevent horizontal scrolling in main */
-}
-
-/* Blog Sections */
-.blog-gallery,
-.blog-feed {
-  padding: 20px;
-  box-sizing: border-box; /* Include padding in width calculation */
-}
-
-/* Carousel styles */
-.carousel {
-  position: relative;
-  overflow: hidden; /* Prevent overflow in carousel */
-}
-
-.carousel-button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(255, 255, 255, 0.8);
-  border: none;
-  cursor: pointer;
-}
-
-.carousel-button.prev {
-  left: 10px;
-}
-
-.carousel-button.next {
-  right: 10px;
-}
-
-/* Slides styles */
-.slides {
-  display: none;
-  text-align: center;
-  padding: 20px;
-  box-sizing: border-box; /* Include padding in width calculation */
-}
-
-.slides[data-active] {
-  display: block;
-}
-
-/* Blog post styles */
-.blog-post {
-  display: flex;
-  flex-direction: column;
-  margin: 10px;
-  padding: 20px;
-  background-color: #333;
-  border-radius: 8px;
-  transition: transform 0.2s;
-  box-sizing: border-box; /* Include padding in width calculation */
-}
-
-.blog-post:hover {
-  transform: scale(1.05);
-}
-
-.thumbnail img {
   width: 100%;
-  border-radius: 8px;
-}
-
-.post-info {
-  padding: 10px 0;
-  box-sizing: border-box; /* Include padding in width calculation */
+  overflow-x: hidden;
 }
 
 /* Footer */
@@ -197,7 +129,7 @@ footer {
   width: 100%;
   padding: 10px;
   flex-shrink: 0;
-  box-sizing: border-box; /* Ensure padding is included in width */
+  box-sizing: border-box;
 }
 
 .footer-logo {

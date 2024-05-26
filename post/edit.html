@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" body="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,8 +14,8 @@
     <link rel="stylesheet" href="/css/styles.css" />
     <link rel="stylesheet" href="/css/post-edit.css" />
     <script type="module" src="/js/components/isSignedIn.mjs"></script>
-    <script type="module" src="/js/pages/edit.mjs"></script>
-    <title>Blog Post Edit Page</title>
+    <script type="module" src="/js/pages/create-post.mjs"></script>
+    <title>Post Editor</title>
   </head>
   <body>
     <header>
@@ -114,54 +114,56 @@
       </nav>
     </header>
     <main>
-      <div class="edit-container">
-        <div class="edit-header">
-          <h1>Edit Blog</h1>
+      <div class="post-container">
+        <div class="post-header">
+          <h1>Editor</h1>
         </div>
-        <div class="edit-form" id="edit-post">
-          <form id="editForm" enctype="multipart/form-data">
-            <div class="form-group" id="delete-button">
-              <button type="button" id="delete">Delete Post</button>
-            </div>
+        <div class="post-form" id="create-post">
+          <form
+            action="/post/create-post.html"
+            method="POST"
+            id="uploadForm"
+            enctype="multipart/form-data">
             <div class="form-group" id="blog-title">
-              <label for="title">Title</label>
+              <label for="title"></label>
               <input
                 type="text"
                 id="title"
                 name="title"
                 placeholder="Blog Title" />
             </div>
-            <div class="form-group" id="your-name">
-              <label for="name">Name</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                placeholder="Your Name" />
-            </div>
+
             <div class="form-group" id="body">
-              <label for="content">Content</label>
+              <label for="body"></label>
               <textarea
-                id="content"
-                name="content"
+                id="body"
+                name="body"
                 placeholder="Write your content here..."></textarea>
             </div>
+
             <div class="form-group" id="post-image-url">
-              <label for="post-image-url">Image URL</label>
+              <label for="post-image-url"></label>
               <input
                 type="text"
                 id="post-image-url"
                 name="post-image-url"
                 placeholder="Enter image URL" />
             </div>
-            <div class="form-group" id="button">
-              <button type="submit">Submit</button>
+
+            <div
+              class="form-group"
+              aria-label="delete-button"
+              id="delete-button">
+              <button id="button-delete" type="submit">Delete Post</button>
+            </div>
+
+            <div class="form-group" id="submit-button">
+              <button id="button-submit" type="submit">Submit</button>
             </div>
           </form>
         </div>
       </div>
     </main>
-
     <footer>
       <div class="footer-logo">
         <img src="https://i.ibb.co/rM38SfG/logo.png" alt="logo" />
