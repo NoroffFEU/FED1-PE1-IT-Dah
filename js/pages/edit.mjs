@@ -1,42 +1,109 @@
 import { doFetch } from "../components/fetch.mjs";
 
 const runPage = async () => {
-  const id = window.location.search.slice(1); // Extracting id from query string
-  const blog = await doFetch("GET", `https://v2.api.noroff.dev/blog/posts/ItDah${id}`);
+  const params = new URLSearchParams(window.location.search);
+  const id = params.get("blogId"); // Extracting blogId from query string
 
-  const form = document.getElementById("uploadForm");
-  const title = document.getElementById("title");
-  const body = document.getElementById("body");
-  const imageUrl = document.getElementById("post-image-url");
+  console.log("Blog ID from URL:", id); // Log the blog ID
 
-  title.value = blog.title;
-  body.value = blog.body;
-  imageUrl.value = blog.media.url;
+  if (!id) {
+    console.error("No blog ID found in URL");
+    return;
+  }
 
-  form.addEventListener("submit", async (event) => {
-    event.preventDefault(); // Prevent the default form submission
+  try {
+    const url = `https://v2.api.noroff.dev/blog/posts/ItDah`; // Fetch all posts
+    console.log("Fetching blog posts from URL:", url); // Log the URL
 
-    const postData = {
-      title: title.value,
-      body: body.value,
-      media: {
-        url: imageUrl.value,
-        alt: `image of blog post: ${title.value}`,
-      },
-    };
+    const response = await doFetch("GET", url);
+    console.log("Fetch Response:", response); // Log the response
 
-    await doFetch("PUT", `https://v2.api.noroff.dev/blog/posts/ItDah${id}`, postData);
-    alert("Post updated successfully");
-  });
-
-  const deleteButton = document.getElementById("button-delete");
-  deleteButton.addEventListener("click", async () => {
-    if (window.confirm("Are you sure you want to delete this post?")) {
-      await doFetch("DELETE", `https://v2.api.noroff.dev/blog/posts/ItDah${id}`);
-      alert("Post deleted successfully");
-      window.location.href = "../index.html"; // Redirect to homepage after deletion
+    if (!response || !response.data) {
+      console.error("Invalid response format or no data found");
+      return;
     }
-  });
+
+    const blogPosts = response.data;
+    console.log("Fetched Blog Data:", blogPosts); // Log the fetched blog data
+
+    const blog = blogPosts.find((post) => post.id === id);
+    console.log("Matched Blog Post:", blog); // Log the matched blog post
+
+    if (blog) {
+      // Fill in the form fields with the fetched blog data
+      document.getElementById("title").value = blog.title || "";
+      document.getElementById("body").value = blog.body || "";
+      document.getElementById("post-image-url").value = blog.media?.url || "";
+    } else {
+      console.error("No blog data found");
+    }
+
+    document
+      .getElementById("uploadForm")
+      .addEventListener("submit", async (event) => {
+        event.preventDefault();
+
+        const postData = {
+          title: document.getElementById("title").value,
+          body: document.getElementById("body").value,
+          media: {
+            url: document.getElementById("post-image-url").value,
+            alt: `image of blog post: ${
+              document.getElementById("title").value
+            }`,
+          },
+        };
+
+        try {
+          const updateResponse = await doFetch(
+            "PUT",
+            `https://v2.api.noroff.dev/blog/posts/ItDah`,
+            postData
+          );
+
+          console.log("Update Response:", updateResponse); // Log the update response
+
+          if (updateResponse.ok) {
+            alert("Post updated successfully");
+          } else {
+            throw new Error(`Failed to update post: ${updateResponse.status}`);
+          }
+        } catch (error) {
+          console.error("Error updating post:", error);
+          alert("Failed to update post");
+        }
+      });
+
+    document
+      .getElementById("button-delete")
+      .addEventListener("click", async (event) => {
+        event.preventDefault();
+        if (window.confirm("Are you sure you want to delete this post?")) {
+          try {
+            const deleteResponse = await doFetch(
+              "DELETE",
+              `https://v2.api.noroff.dev/blog/posts/ItDah`
+            );
+
+            console.log("Delete Response:", deleteResponse); // Log the delete response
+
+            if (deleteResponse.ok) {
+              alert("Post deleted successfully");
+              window.location.href = "../index.html";
+            } else {
+              throw new Error(
+                `Failed to delete post: ${deleteResponse.status}`
+              );
+            }
+          } catch (error) {
+            console.error("Error deleting post:", error);
+            alert("Failed to delete post");
+          }
+        }
+      });
+  } catch (error) {
+    console.error("Failed to fetch the blog post:", error);
+  }
 };
 
 runPage();

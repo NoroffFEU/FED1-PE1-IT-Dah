@@ -41,3 +41,15 @@ body::before {
   margin-bottom: 20px;
   padding: 0 50px;
 }
+
+.edit-post {
+  text-align: center;
+  width: 125px;
+  height: 45px;
+  border-radius: 10px;
+  background-color: #953775;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}

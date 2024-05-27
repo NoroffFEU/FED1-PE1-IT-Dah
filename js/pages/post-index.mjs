@@ -59,7 +59,13 @@ function displayPost(post) {
     post.media?.alt || post.title || "No Title"
   }" onerror="this.onerror=null;this.src='../images/fallback-image.png';" />
     <p>${post.body || "No text available"}</p>
+    <button class="edit-post" id="edit-post" type="button">Edit Post</button>
   `;
+
+  document.getElementById("edit-post").addEventListener("click", () => {
+    window.location.href = `/post/edit.html?blogId=${post.id}`;
+  });
+
   console.log("Post displayed:", postContainer.innerHTML);
 }
 

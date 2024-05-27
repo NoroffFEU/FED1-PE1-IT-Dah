@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" body="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="/css/styles.css" />
     <link rel="stylesheet" href="/css/post-edit.css" />
     <script type="module" src="/js/components/isSignedIn.mjs"></script>
-    <script type="module" src="/js/pages/create-post.mjs"></script>
+    <script type="module" src="/js/pages/edit.mjs"></script>
     <title>Post Editor</title>
   </head>
   <body>
@@ -59,8 +59,7 @@
                 <svg width="24px" height="24px" viewBox="0 0 24 24">
                   <path
                     fill="#ffffff"
-                    d="M20 10a1 1 0 1 0-2 0zM6 10a1 1 0 0 0-2 0zm14.293 2.707a1 1 0 0 0 1.414-1.414zM12 3l.707-.707a1 1 0 0 0-1.414 0zm-9.707 8.293a1 1 0 1 0 1.414 1.414zM7 22h10v-2H7zm13-3v-9h-2v9zM6 19v-9H4v9zm15.707-7.707l-9-9l-1.414 1.414l9 9zm-10.414-9l-9 9l1.414 1.414l9-9zM17 22a3 3 0 0 0 3-3h-2a1 1 0 0 1-1 1zM7 20a1 1 0 0 1-1-1H4a3 3 0 0 0 3 3z"
-                    aria-label="Home Icon" />
+                    d="M20 10a1 1 0 1 0-2 0zM6 10a1 1 0 0 0-2 0zm14.293 2.707a1 1 0 0 0 1.414-1.414zM12 3l.707-.707a1 1 0 0 0-1.414 0zm-9.707 8.293a1 1 0 1 0 1.414 1.414zM7 22h10v-2H7zm13-3v-9h-2v9zM6 19v-9H4v9zm15.707-7.707l-9-9l-1.414 1.414l9 9zm-10.414-9l-9 9l1.414 1.414l9-9zM17 22a3 3 0 0 0 3-3h-2a1 1 0 0 1-1 1zM7 20a1 1 0 0 1-1-1H4a3 3 0 0 0 3 3z"></path>
                 </svg>
                 <p>Home</p>
               </a>
@@ -119,11 +118,7 @@
           <h1>Editor</h1>
         </div>
         <div class="post-form" id="create-post">
-          <form
-            action="/post/create-post.html"
-            method="POST"
-            id="uploadForm"
-            enctype="multipart/form-data">
+          <form id="uploadForm">
             <div class="form-group" id="blog-title">
               <label for="title"></label>
               <input
@@ -133,7 +128,7 @@
                 placeholder="Blog Title" />
             </div>
 
-            <div class="form-group" id="body">
+            <div class="form-group" id="body1">
               <label for="body"></label>
               <textarea
                 id="body"
@@ -141,7 +136,7 @@
                 placeholder="Write your content here..."></textarea>
             </div>
 
-            <div class="form-group" id="post-image-url">
+            <div class="form-group" id="post-image-url1">
               <label for="post-image-url"></label>
               <input
                 type="text"
@@ -154,7 +149,7 @@
               class="form-group"
               aria-label="delete-button"
               id="delete-button">
-              <button id="button-delete" type="submit">Delete Post</button>
+              <button id="button-delete" type="button">Delete Post</button>
             </div>
 
             <div class="form-group" id="submit-button">
