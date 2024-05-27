@@ -39,9 +39,7 @@ h3 {
 }
 
 /* Header */
-
 header {
-  display: flex;
   background-image: linear-gradient(
     to right,
     #000000 15%,
@@ -50,13 +48,13 @@ header {
   );
   border-bottom: 1px solid white;
   width: 100%;
+  box-sizing: border-box;
+  margin: auto;
 }
 
 #signedOutHeader,
 #signedInHeader {
-  display: flex;
-  width: 70%;
-  justify-content: space-evenly;
+  width: 80%;
   align-items: flex-end;
   margin: auto;
   gap: 20px;
@@ -79,8 +77,6 @@ header a,
 }
 
 header p {
-  display: flex;
-  flex-direction: column;
   text-align: center;
   align-items: center;
   text-decoration: none;
@@ -97,6 +93,7 @@ li {
 .header-logo {
   display: flex;
   justify-content: center;
+  align-items: center;
   margin: auto;
   margin-bottom: 15px;
 }
