@@ -16,7 +16,8 @@ export const doFetch = async (method, url, body = null) => {
       throw new Error(`An error occurred: ${response.statusText}`);
     }
 
-    return await response.json();
+    const responseText = await response.text();
+    return responseText ? JSON.parse(responseText) : {};
   } catch (error) {
     console.error("Error during fetch:", error);
     throw error;

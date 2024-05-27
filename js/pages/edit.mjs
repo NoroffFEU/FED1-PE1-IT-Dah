@@ -1,6 +1,9 @@
 import { doFetch } from "../components/fetch.mjs";
+import { isSignedIn } from "../components/isSignedIn.mjs"; // Ensure the user is signed in
 
 const runPage = async () => {
+  isSignedIn(); // Check if the user is signed in
+
   const params = new URLSearchParams(window.location.search);
   const id = params.get("blogId"); // Extracting blogId from query string
 
@@ -57,16 +60,16 @@ const runPage = async () => {
         try {
           const updateResponse = await doFetch(
             "PUT",
-            `https://v2.api.noroff.dev/blog/posts/ItDah`,
+            `https://v2.api.noroff.dev/blog/posts/ItDah/${id}`,
             postData
           );
 
           console.log("Update Response:", updateResponse); // Log the update response
 
-          if (updateResponse.ok) {
+          if (updateResponse.data) {
             alert("Post updated successfully");
           } else {
-            throw new Error(`Failed to update post: ${updateResponse.status}`);
+            throw new Error(`Failed to update post: ${updateResponse.meta}`);
           }
         } catch (error) {
           console.error("Error updating post:", error);
@@ -82,12 +85,12 @@ const runPage = async () => {
           try {
             const deleteResponse = await doFetch(
               "DELETE",
-              `https://v2.api.noroff.dev/blog/posts/ItDah`
+              `https://v2.api.noroff.dev/blog/posts/ItDah/${id}`
             );
 
             console.log("Delete Response:", deleteResponse); // Log the delete response
 
-            if (deleteResponse.ok) {
+            if (deleteResponse) {
               alert("Post deleted successfully");
               window.location.href = "../index.html";
             } else {
