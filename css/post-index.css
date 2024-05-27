@@ -7,7 +7,7 @@ body::before {
   height: 100%;
   background: url("https://i.ibb.co/RpDVn1s/background-image.jpg") no-repeat
     center center/cover;
-  opacity: 0.7;
+  opacity: 0.3;
   z-index: -1;
 }
 
@@ -21,6 +21,7 @@ body::before {
   padding: 20px;
   position: relative;
   z-index: 1;
+  max-width: 900px;
 }
 
 #post-container h1 {
