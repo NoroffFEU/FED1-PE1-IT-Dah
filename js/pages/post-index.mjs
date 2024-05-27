@@ -1,4 +1,11 @@
 import { doFetch } from "../components/fetch.mjs";
+import { isSignedIn } from "../components/isSignedIn.mjs"; // Import the isSignedIn function
+
+// Function to check if the user is signed in
+const checkSignedIn = () => {
+  const userInfo = JSON.parse(localStorage.getItem("userInfo"));
+  return !!userInfo;
+};
 
 async function fetchPost() {
   const params = new URLSearchParams(window.location.search);
@@ -50,6 +57,8 @@ function displayPost(post) {
     return;
   }
 
+  const userSignedIn = checkSignedIn(); // Check if user is signed in
+
   postContainer.innerHTML = `
     <h1>${post.title || "No Title"}</h1>
     <p>${post.author.name || "Unknown Author"} - ${
@@ -59,12 +68,18 @@ function displayPost(post) {
     post.media?.alt || post.title || "No Title"
   }" onerror="this.onerror=null;this.src='../images/fallback-image.png';" />
     <p>${post.body || "No text available"}</p>
-    <button class="edit-post" id="edit-post" type="button">Edit Post</button>
+    ${
+      userSignedIn
+        ? `<button class="edit-post" id="edit-post" type="button">Edit Post</button>`
+        : ""
+    }
   `;
 
-  document.getElementById("edit-post").addEventListener("click", () => {
-    window.location.href = `/post/edit.html?blogId=${post.id}`;
-  });
+  if (userSignedIn) {
+    document.getElementById("edit-post").addEventListener("click", () => {
+      window.location.href = `/post/edit.html?blogId=${post.id}`;
+    });
+  }
 
   console.log("Post displayed:", postContainer.innerHTML);
 }
