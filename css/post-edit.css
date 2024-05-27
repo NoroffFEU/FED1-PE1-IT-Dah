@@ -21,6 +21,10 @@ textarea {
   border-radius: 10px;
 }
 
+textarea {
+  height: 200px;
+}
+
 #uploadForm {
   display: grid;
   gap: 10px;
