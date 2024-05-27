@@ -68,6 +68,7 @@ const runPage = async () => {
 
           if (updateResponse.data) {
             alert("Post updated successfully");
+            window.location.href = "../index.html"; // Redirect to index.html
           } else {
             throw new Error(`Failed to update post: ${updateResponse.meta}`);
           }
@@ -92,7 +93,7 @@ const runPage = async () => {
 
             if (deleteResponse) {
               alert("Post deleted successfully");
-              window.location.href = "../index.html";
+              window.location.href = "../index.html"; // Redirect to index.html
             } else {
               throw new Error(
                 `Failed to delete post: ${deleteResponse.status}`
