@@ -52,15 +52,12 @@ textarea {
   grid-area: 4 / 3 / 4 / 3;
 }
 
-div {
-  margin: auto;
-}
 
 #edit-button,
 #post-edit {
   grid-area: 4 / 4 / 4 / 5;
   text-align: center;
-  width: 115px;
+  width: 125px;
   height: 45px;
   border-radius: 10px;
   background-color: #574075;

@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" body="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -20,7 +20,6 @@
   <body>
     <header>
       <nav>
-        <!-- Header content for signed out -->
         <div id="signedOutHeader">
           <ul class="left">
             <li>
@@ -50,8 +49,6 @@
             </li>
           </ul>
         </div>
-
-        <!-- Header content for signed in -->
         <div id="signedInHeader" style="display: none">
           <ul>
             <li>
@@ -59,8 +56,7 @@
                 <svg width="24px" height="24px" viewBox="0 0 24 24">
                   <path
                     fill="#ffffff"
-                    d="M20 10a1 1 0 1 0-2 0zM6 10a1 1 0 0 0-2 0zm14.293 2.707a1 1 0 0 0 1.414-1.414zM12 3l.707-.707a1 1 0 0 0-1.414 0zm-9.707 8.293a1 1 0 1 0 1.414 1.414zM7 22h10v-2H7zm13-3v-9h-2v9zM6 19v-9H4v9zm15.707-7.707l-9-9l-1.414 1.414l9 9zm-10.414-9l-9 9l1.414 1.414l9-9zM17 22a3 3 0 0 0 3-3h-2a1 1 0 0 1-1 1zM7 20a1 1 0 0 1-1-1H4a3 3 0 0 0 3 3z"
-                    aria-label="Home Icon" />
+                    d="M20 10a1 1 0 1 0-2 0zM6 10a1 1 0 0 0-2 0zm14.293 2.707a1 1 0 0 0 1.414-1.414zM12 3l.707-.707a1 1 0 0 0-1.414 0zm-9.707 8.293a1 1 0 1 0 1.414 1.414zM7 22h10v-2H7zm13-3v-9h-2v9zM6 19v-9H4v9zm15.707-7.707l-9-9l-1.414 1.414l9 9zm-10.414-9l-9 9l1.414 1.414l9-9zM17 22a3 3 0 0 0 3-3h-2a1 1 0 0 1-1 1zM7 20a1 1 0 0 1-1-1H4a3 3 0 0 0 3 3z"></path>
                 </svg>
                 <p>Home</p>
               </a>
@@ -82,8 +78,7 @@
                     d="M384 224v184a40 40 0 0 1-40 40H104a40 40 0 0 1-40-40V168a40 40 0 0 1 40-40h167.48" />
                   <path
                     fill="white"
-                    d="M459.94 53.25a16.06 16.06 0 0 0-23.22-.56L424.35 65a8 8 0 0 0 0 11.31l11.34 11.32a8 8 0 0 0 11.34 0l12.06-12c6.1-6.09 6.67-16.01.85-22.38M399.34 90L218.82 270.2a9 9 0 0 0-2.31 3.93L208.16 299a3.91 3.91 0 0 0 4.86 4.86l24.85-8.35a9 9 0 0 0 3.93-2.31L422 112.66a9 9 0 0 0 0-12.66l-9.95-10a9 9 0 0 0-12.71 0"
-                    aria-label="Blog Spawn Icon" />
+                    d="M459.94 53.25a16.06 16.06 0 0 0-23.22-.56L424.35 65a8 8 0 0 0 0 11.31l11.34 11.32a8 8 0 0 0 11.34 0l12.06-12c6.1-6.09 6.67-16.01.85-22.38M399.34 90L218.82 270.2a9 9 0 0 0-2.31 3.93L208.16 299a3.91 3.91 0 0 0 4.86 4.86l24.85-8.35a9 9 0 0 0 3.93-2.31L422 112.66a9 9 0 0 0 0-12.66l-9.95-10a9 9 0 0 0-12.71 0" />
                 </svg>
                 <p>Blog Spawn</p>
               </a>
@@ -132,7 +127,6 @@
                 name="title"
                 placeholder="Blog Title" />
             </div>
-
             <div class="form-group" id="your-name">
               <label for="name"></label>
               <input
@@ -141,7 +135,6 @@
                 name="name"
                 placeholder="Your Name" />
             </div>
-
             <div class="form-group" id="body">
               <label for="body"></label>
               <textarea
@@ -149,7 +142,6 @@
                 name="body"
                 placeholder="Write your content here..."></textarea>
             </div>
-
             <div class="form-group" id="post-image-url">
               <label for="post-image-url"></label>
               <input
@@ -158,7 +150,6 @@
                 name="post-image-url"
                 placeholder="Enter image URL" />
             </div>
-
             <div class="form-group" id="edit-button">
               <button id="post-edit" type="submit">Submit</button>
             </div>
