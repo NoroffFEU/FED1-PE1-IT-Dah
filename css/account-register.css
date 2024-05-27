@@ -1,61 +1,61 @@
 .create-account-header {
-    display: flex;
-    justify-content: center;
-    align-items: top;
-    text-align: center;
-    height: 50px;
-    width: 100%;
-    background-color: #953775;
-    margin-bottom: 30px;
-    border-bottom: solid 1px #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: top;
+  text-align: center;
+  height: 50px;
+  width: 100%;
+  background-color: #953775;
+  margin-bottom: 60px;
+  border-bottom: solid 1px #ffffff;
 }
 
 .create-account-header h1 {
-    color: #ffffff;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    font-size: 32px;
-    font-weight: 500;
-    margin: 0;
-    padding: 5px 0px 10px 0px;
+  color: #ffffff;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  font-size: 32px;
+  font-weight: 500;
+  margin: 0;
+  padding: 5px 0px 10px 0px;
 }
 
 .form-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-    width: 100%;
-    padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  width: 100%;
+  padding-bottom: 50px;
 }
-    
+
 .register-form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    width: 320px;
-    border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 320px;
+  border-radius: 10px;
 }
-  
+
 .register-form input {
-    padding: 15px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    background-color: #fff;
-    color: #000;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #fff;
+  color: #000;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
-    
+
 .register-form button {
-    padding: 15px;
-    background-color: #574075;
-    color: #ffffff;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    align-self: flex-end;
+  padding: 15px;
+  background-color: #574075;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  align-self: flex-end;
 }
