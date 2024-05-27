@@ -2,7 +2,6 @@ import { doFetch } from "../components/fetch.mjs";
 
 const colors = ["#574075", "#953775", "#ffdc98", "#d59f77"];
 
-// Function to determine text color based on background color
 function getTextColor(backgroundColor) {
   return backgroundColor === "#ffdc98" || backgroundColor === "#d59f77"
     ? "black"
@@ -14,7 +13,7 @@ function createBlogPostSlide(post, color) {
   const slide = document.createElement("li");
   slide.className = "slides";
   slide.style.backgroundColor = color;
-  slide.style.color = textColor; // Set text color
+  slide.style.color = textColor;
   slide.id = `card-${post.color || "default"}`;
   slide.innerHTML = `
     <h1>${post.title || "No Title"}</h1>
@@ -39,7 +38,7 @@ function createBlogPostCard(post, color) {
   const card = document.createElement("div");
   card.className = "blog-post";
   card.style.backgroundColor = color;
-  card.style.color = textColor; // Set text color
+  card.style.color = textColor;
   card.id = `minicard-${post.id}`;
   card.innerHTML = `
     <div class="thumbnail">
@@ -72,7 +71,6 @@ async function fetchBlogPosts() {
       "GET",
       "https://v2.api.noroff.dev/blog/posts/ItDah"
     );
-    console.log("Full API Response", response);
 
     if (isValidResponse(response)) {
       const slidesContainer = document.querySelector("[data-slides]");
@@ -101,12 +99,8 @@ async function fetchBlogPosts() {
         const card = createBlogPostCard(post, colors[index % colors.length]);
         feedContainer.appendChild(card);
       });
-    } else {
-      console.error("Invalid response data format");
     }
-  } catch (error) {
-    console.error("Failed to fetch blog posts:", error);
-  }
+  } catch (error) {}
 }
 
 const buttons = document.querySelectorAll("[data-carousel-button]");

@@ -1,22 +1,24 @@
-import { doFetch } from '../components/fetch.mjs';
+import { doFetch } from "../components/fetch.mjs";
 
-document.addEventListener('DOMContentLoaded', () => {
-  const registerForm = document.querySelector('.register-form');
+document.addEventListener("DOMContentLoaded", () => {
+  const registerForm = document.querySelector(".register-form");
 
-  registerForm.addEventListener('submit', async (event) => {
+  registerForm.addEventListener("submit", async (event) => {
     event.preventDefault();
 
-const formData = new FormData(registerForm);
-    const postdata = { 
-      email: formData.get('email'),
-      password: formData.get('password'),
-      name: formData.get('name')
+    const formData = new FormData(registerForm);
+    const postdata = {
+      email: formData.get("email"),
+      password: formData.get("password"),
+      name: formData.get("name"),
     };
-    
-      const data = await doFetch('POST', 'https://v2.api.noroff.dev/auth/register', postdata );
-console.log(data);
 
-      // Redirect to the create-post page
-      window.location.href = './login.html';
+    const data = await doFetch(
+      "POST",
+      "https://v2.api.noroff.dev/auth/register",
+      postdata
+    );
+
+    window.location.href = "./login.html";
   });
 });
