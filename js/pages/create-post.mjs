@@ -26,7 +26,8 @@ const runPage = () => {
       window.alert("Post created successfully");
       window.location.href = "../index.html";
     } catch (error) {
-      ("Failed to create post.");
+      console.error("Error:", error);
+      window.alert("Failed to create post.");
     }
   });
 };
