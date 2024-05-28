@@ -3,7 +3,7 @@ import { doFetch } from "../components/fetch.mjs";
 const colors = ["#953775", "#574075", "#D59F77", "#FFDC98"];
 
 function getTextColor(backgroundColor) {
-  return backgroundColor === "#ffdc98" || backgroundColor === "#d59f77"
+  return backgroundColor === "#FFDC98" || backgroundColor === "#D59F77"
     ? "black"
     : "white";
 }
