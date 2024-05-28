@@ -122,22 +122,34 @@
       </div>
       <div class="form-wrapper">
         <form class="register-form">
-          <label for="Name" aria-label="name"></label>
-          <input type="text" placeholder="Name" name="name" required />
-          <label for="email" aria-label="email"></label>
-          <input type="email" placeholder="E-mail" name="email" required />
-          <label for="password" aria-label="password"></label>
+          <input
+            type="text"
+            placeholder="Name"
+            name="name"
+            aria-label="Name"
+            required />
+
+          <input
+            type="email"
+            placeholder="E-mail"
+            name="email"
+            aria-label="Email"
+            required />
+
           <input
             type="password"
             placeholder="Create a password"
             name="password"
+            aria-label="Create a password"
             required />
-          <label for="confirm-password" aria-label="confirm-password"></label>
+
           <input
             type="password"
             placeholder="Repeat password"
             name="confirm-password"
+            aria-label="Repeat password"
             required />
+
           <button type="submit">Create Account</button>
         </form>
       </div>
