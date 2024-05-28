@@ -27,7 +27,7 @@ function createBlogPostSlide(post, color) {
   `;
 
   slide.addEventListener("click", () => {
-    window.location.href = `/post/index.html?blogId=${post.id}`;
+    window.location.href = `post/index.html?blogId=${post.id}`;
   });
 
   return slide;
@@ -55,7 +55,7 @@ function createBlogPostCard(post, color) {
   `;
 
   card.addEventListener("click", () => {
-    window.location.href = `/post/index.html?blogId=${post.id}`;
+    window.location.href = `post/index.html?blogId=${post.id}`;
   });
 
   return card;

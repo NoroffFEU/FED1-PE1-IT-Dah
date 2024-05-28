@@ -66,7 +66,7 @@ function displayPost(post) {
 
   if (userSignedIn) {
     document.getElementById("edit-post").addEventListener("click", () => {
-      window.location.href = `/post/edit.html?blogId=${post.id}`;
+      window.location.href = `./edit.html?blogId=${post.id}`;
     });
   }
 }
