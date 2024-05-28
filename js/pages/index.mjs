@@ -1,6 +1,6 @@
 import { doFetch } from "../components/fetch.mjs";
 
-const colors = ["#574075", "#953775", "#ffdc98", "#d59f77"];
+const colors = ["#953775", "#574075", "#D59F77", "#FFDC98"];
 
 function getTextColor(backgroundColor) {
   return backgroundColor === "#ffdc98" || backgroundColor === "#d59f77"
