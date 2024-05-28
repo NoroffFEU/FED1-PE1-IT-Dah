@@ -20,6 +20,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     localStorage.setItem("userInfo", JSON.stringify(data.data));
 
-    window.location.href = "/index.html";
+    window.location.href = "../index.html";
   });
 });
