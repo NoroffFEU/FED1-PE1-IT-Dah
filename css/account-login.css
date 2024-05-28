@@ -65,7 +65,7 @@ form {
 .form-group label,
 input {
   text-align: left;
-  width: 100%;
+  width: 95%;
   height: 45px;
   border-radius: 10px;
 }
@@ -75,7 +75,7 @@ input {
 }
 
 button {
-  width: 115px;
+  width: 110px;
   height: 45px;
   border-radius: 10px;
   background-color: #574075;
@@ -83,10 +83,11 @@ button {
   font-size: 18px;
   font-weight: bold;
   cursor: pointer;
-  grid-area: auto;
   display: inline-block;
   justify-self: end;
 }
+
+/* Sign In */
 
 .register-link {
   display: inline-block;

@@ -34,8 +34,9 @@
 .register-form {
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
   gap: 20px;
-  width: 320px;
+  width: 335px;
   border-radius: 10px;
 }
 
@@ -47,15 +48,18 @@
   background-color: #fff;
   color: #000;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  width: 90%;
 }
 
-.register-form button {
-  padding: 15px;
+button {
+  width: 150px;
+  height: 45px;
+  border-radius: 10px;
   background-color: #574075;
   color: #ffffff;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
+  font-size: 18px;
+  font-weight: bold;
   cursor: pointer;
-  align-self: flex-end;
+  display: inline-block;
+  justify-self: end;
 }
